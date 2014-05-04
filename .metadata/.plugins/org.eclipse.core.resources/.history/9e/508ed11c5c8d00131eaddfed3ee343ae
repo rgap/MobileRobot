@@ -1,0 +1,49 @@
+#ifndef DEPTHSENSING_H_
+#define DEPTHSENSING_H_
+
+#include "PointCloud.h"
+#include "PointCloudRGB.h"
+#include "PointCloudGrayscale.h"
+#include "SAC_Method.h"
+
+/*! \class Class DepthSensing - DepthSensing.h
+ *  \brief Entradas del sensor de profundidad
+ */
+
+#define TYPE_CLOUD 1
+
+class DepthSensing {
+
+private:
+	uchar* imgMaxDepth_pt;
+	uchar* imgObstacles_pt;
+	PointCloud* pointCloud;
+
+	SAC_Method sac_method;
+
+public:
+
+	DepthSensing();
+
+	void initializePointCloud(Size & szFrame);
+
+	float getMaxDepth(VideoCapture& capture);
+
+	void depthThresholding(Mat& world, Mat&imgMaxDepth, float maxDepth);
+
+	////////////////////
+	void colorizeDisparity(const cv::Mat& gray, cv::Mat& rgb,
+			double maxDisp = -1.f, float S = 1.f, float V = 1.f);
+
+	void segmentObstacles(Mat& world, Mat& imgObstacles, Mat &imgMaxDepth, float minDistObstacle);
+
+	void dispMapRefinement(Mat& world);
+
+	//////////////////// PointCloud
+
+	void visualizePointCloud();
+
+	virtual ~DepthSensing();
+};
+
+#endif /* DEPTHSENSING_H_ */

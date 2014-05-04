@@ -1,0 +1,99 @@
+#include "CalcTime.h"
+
+void CalcTime::start() {
+	pre = getTickCount();
+}
+
+void CalcTime::restart() {
+	start();
+}
+
+void CalcTime::show() {
+	getTime();
+	switch (timeMode) {
+	case TIME_NSEC:
+		cout << mes << ": " << cTime << " nsec" << endl;
+		break;
+	case TIME_SEC:
+		cout << mes << ": " << cTime << " sec" << endl;
+		break;
+	case TIME_MIN:
+		cout << mes << ": " << cTime << " minute" << endl;
+		break;
+	case TIME_HOUR:
+		cout << mes << ": " << cTime << " hour" << endl;
+		break;
+	case TIME_MSEC:
+	default:
+		cout << mes << ": " << cTime << " msec" << endl;
+		break;
+	}
+}
+
+void CalcTime::show(string mes) {
+	getTime();
+	switch (timeMode) {
+	case TIME_NSEC:
+		cout << mes << ": " << cTime << " nsec" << endl;
+		break;
+	case TIME_SEC:
+		cout << mes << ": " << cTime << " sec" << endl;
+		break;
+	case TIME_MIN:
+		cout << mes << ": " << cTime << " minute" << endl;
+		break;
+	case TIME_HOUR:
+		cout << mes << ": " << cTime << " hour" << endl;
+		break;
+
+	case TIME_MSEC:
+	default:
+		cout << mes << ": " << cTime << " msec" << endl;
+		break;
+	}
+}
+
+double CalcTime::getTime() {
+	cTime = (getTickCount() - pre) / (getTickFrequency());
+	switch (timeMode) {
+	case TIME_NSEC:
+		cTime *= 1000000.0;
+		break;
+	case TIME_SEC:
+		cTime *= 1.0;
+		break;
+	case TIME_MIN:
+		cTime /= (60.0);
+		break;
+	case TIME_HOUR:
+		cTime /= (60 * 60);
+		break;
+	case TIME_MSEC:
+	default:
+		cTime *= 1000.0;
+		break;
+	}
+	return cTime;
+}
+
+void CalcTime::setMessage(string src) {
+	mes = src;
+}
+
+void CalcTime::setMode(int mode) {
+	timeMode = mode;
+}
+
+CalcTime::CalcTime(string message, int mode, bool isShow) {
+	_isShow = isShow;
+	timeMode = mode;
+
+	setMessage(message);
+	start();
+}
+
+CalcTime::~CalcTime() {
+	getTime();
+	if (_isShow)
+		show();
+}

@@ -1,0 +1,8 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+################################################################################
+
+USER_OBJS :=
+
+LIBS := -lopencv_core -lopencv_core -lopencv_imgproc -lopencv_highgui -lopencv_ml -lopencv_video -lopencv_features2d -lopencv_calib3d -lopencv_objdetect -lopencv_contrib -lopencv_legacy -lopencv_flann -lopencv_nonfree -lpcl_apps -lpcl_common -lpcl_features -lpcl_tracking -lpcl_visualization -lboost_thread -lboost_system -lboost_filesystem -lboost_graph_parallel -lpthread -lrt -ldl -lopencv_imgproc -lopencv_highgui -lopencv_ml -lopencv_video -lopencv_features2d -lopencv_calib3d -lopencv_objdetect -lopencv_contrib -lopencv_legacy -lopencv_flann -lfreenect -lfreenect_sync -lpcl_apps -lpcl_common -lpcl_features -lpcl_tracking -lpcl_visualization -lboost_thread -lboost_system -lboost_filesystem -lboost_graph_parallel -lpthread -lrt -ldl -lOpenNI -lserial
+

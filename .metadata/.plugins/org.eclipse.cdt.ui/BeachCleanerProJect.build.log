@@ -1,0 +1,36 @@
+
+**** Build of configuration Debug for project BeachCleanerProJect ****
+
+make all 
+Building file: ../OpOthers.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include -I/usr/include -I/usr/local/include/opencv -I/usr/include/pcl-1.7 -I/usr/include/eigen3 -I/usr/include/vtk-5.8 -I/usr/include/ni -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"OpOthers.d" -MT"OpOthers.d" -o"OpOthers.o" "../OpOthers.cpp"
+Finished building: ../OpOthers.cpp
+ 
+Building file: ../RobotVision.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include -I/usr/include -I/usr/local/include/opencv -I/usr/include/pcl-1.7 -I/usr/include/eigen3 -I/usr/include/vtk-5.8 -I/usr/include/ni -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"RobotVision.d" -MT"RobotVision.d" -o"RobotVision.o" "../RobotVision.cpp"
+In file included from /usr/include/c++/4.8/backward/strstream:51:0,
+                 from /usr/include/vtk-5.8/vtkIOStream.h:112,
+                 from /usr/include/vtk-5.8/vtkSystemIncludes.h:40,
+                 from /usr/include/vtk-5.8/vtkIndent.h:24,
+                 from /usr/include/vtk-5.8/vtkObjectBase.h:43,
+                 from /usr/include/vtk-5.8/vtkSmartPointerBase.h:26,
+                 from /usr/include/vtk-5.8/vtkSmartPointer.h:23,
+                 from /usr/include/pcl-1.7/pcl/visualization/point_cloud_geometry_handlers.h:48,
+                 from /usr/include/pcl-1.7/pcl/visualization/point_cloud_handlers.h:41,
+                 from /usr/include/pcl-1.7/pcl/visualization/common/actor_map.h:40,
+                 from /usr/include/pcl-1.7/pcl/visualization/pcl_visualizer.h:47,
+                 from ../3D_Processing/PointCloud.h:22,
+                 from ../3D_Processing/DepthSensing.h:4,
+                 from ../RobotVision.h:15,
+                 from ../RobotVision.cpp:8:
+/usr/include/c++/4.8/backward/backward_warning.h:32:2: warning: #warning This file includes at least one deprecated or antiquated header which may be removed without further notice at a future date. Please use a non-deprecated interface with equivalent functionality instead. For a listing of replacement headers and interfaces, consult the file backward_warning.h. To disable this warning use -Wno-deprecated. [-Wcpp]
+ #warning \
+  ^
+In file included from ../RobotVision.cpp:8:0:
+../RobotVision.h:16:46: fatal error: 3D_Processing/AbstractPointCloud.h: No existe el archivo o el directorio
+ #include "3D_Processing/AbstractPointCloud.h"
+                                              ^
+compilation terminated.
+make: *** [RobotVision.o] Error 1

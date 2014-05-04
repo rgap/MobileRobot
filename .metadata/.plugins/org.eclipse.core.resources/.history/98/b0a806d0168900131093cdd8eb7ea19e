@@ -1,0 +1,122 @@
+#include "DepthSensing.h"
+#include <iostream>
+#include "globals.h"
+#include "typedefs.h"
+
+using namespace cv;
+using namespace std;
+
+
+////////////// SEGMENTACION MOMENTOS - CLASIFICACION   Y SELECCION LATA MAS CERCANA
+
+DepthSensing::DepthSensing() {
+
+	pointCloud = PointCloudPtr(new PointCloudRGB());
+}
+
+void DepthSensing::initializePointCloud(){
+	pointCloud->visualizeCloud();
+}
+
+
+void DepthSensing::visualizePointCloud(){
+	pointCloud->visualizeCloud();
+}
+
+// OBSTACULOS
+void DepthSensing::segmentObstacles(Mat& imgColor, Mat& world, Mat &imgMaxDepth, float minDistObstacle) {
+
+	pointCloud->fillCloud(imgColor,world,imgMaxDepth);
+
+	/*
+	int i, j;
+	for (i = 0; i < world.rows; ++i) {
+		imgObstacles_pt = imgObstacles.ptr<uchar> (i);
+		for (j = 0; j < world.cols; ++j) {
+			//world.at<Vec3f> (i, j)[2]
+		}
+	}
+	*/
+}
+
+void DepthSensing::depthThresholding(Mat& world, Mat&imgMaxDepth,
+		float maxDepth) {
+	int i, j;
+	for (i = 0; i < world.rows; ++i) {
+		imgMaxDepth_pt = imgMaxDepth.ptr<uchar> (i);
+		for (j = 0; j < world.cols; ++j) {
+			if (world.at<Vec3f> (i, j)[2] > maxDepth) {
+				imgMaxDepth_pt[j] = 0;
+				world.at<Vec3f> (i, j)[2] = MAX_DEPTH;
+			} else {
+				imgMaxDepth_pt[j] = 255;
+			}
+		}
+	}
+}
+
+void DepthSensing::colorizeDisparity(const Mat& gray, Mat& rgb, double maxDisp,
+		float S, float V) {
+	if (maxDisp <= 0) {
+		maxDisp = 0;
+		minMaxLoc(gray, 0, &maxDisp);
+	}
+	rgb.create(gray.size(), CV_8UC3);
+	rgb = Scalar::all(0);
+	if (maxDisp < 1)
+		return;
+	int y, x;
+	uchar d, b, g, r;
+	unsigned int H, hi;
+	float f, p, q, t;
+	Point3f res;
+	for (y = 0; y < gray.rows; y++) {
+		for (x = 0; x < gray.cols; x++) {
+			d = gray.at<uchar> (y, x);
+			H = ((uchar) maxDisp - d) * 240 / (uchar) maxDisp;
+			hi = (H / 60) % 6;
+			f = H / 60.f - H / 60;
+			p = V * (1 - S);
+			q = V * (1 - f * S);
+			t = V * (1 - (1 - f) * S);
+			if (hi == 0) //R = V,        G = t,        B = p
+				res = Point3f(p, t, V);
+			if (hi == 1) // R = q,        G = V,        B = p
+				res = Point3f(p, V, q);
+			if (hi == 2) // R = p,        G = V,        B = t
+				res = Point3f(t, V, p);
+			if (hi == 3) // R = p,        G = q,        B = V
+				res = Point3f(V, q, p);
+			if (hi == 4) // R = t,        G = p,        B = V
+				res = Point3f(V, p, t);
+			if (hi == 5) // R = V,        G = p,        B = q
+				res = Point3f(q, p, V);
+			b = (uchar) (std::max(0.f, std::min(res.x, 1.f)) * 255.f);
+			g = (uchar) (std::max(0.f, std::min(res.y, 1.f)) * 255.f);
+			r = (uchar) (std::max(0.f, std::min(res.z, 1.f)) * 255.f);
+			rgb.at<Point3_<uchar> > (y, x) = Point3_<uchar> (b, g, r);
+		}
+	}
+}
+
+float DepthSensing::getMaxDepth(VideoCapture& capture) {
+	const int minDistance = 400; // mm
+	float baseline =
+			(float) capture.get(CV_CAP_OPENNI_DEPTH_GENERATOR_BASELINE); // mm
+	float focalLength = (float) capture.get(
+			CV_CAP_OPENNI_DEPTH_GENERATOR_FOCAL_LENGTH); // pixels
+	return baseline * focalLength / minDistance;
+}
+
+void DepthSensing::dispMapRefinement(Mat& world) {
+	/*
+	 int r, c;
+	 float promDistance, promDisparidad;
+	 for (r = 0; r < disparityMap.rows; ++r) {
+	 world.at<Vec3f> (r, c)[2] = promDistance;
+	 }
+	 */
+}
+
+DepthSensing::~DepthSensing() {
+}
