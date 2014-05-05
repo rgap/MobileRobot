@@ -72,6 +72,8 @@
 									<listOptionValue builtIn="false" value="boost_graph_parallel"/>
 									<listOptionValue builtIn="false" value="dl"/>
 									<listOptionValue builtIn="false" value="pthread"/>
+									<listOptionValue builtIn="false" value="gmp"/>
+									<listOptionValue builtIn="false" value="mpfr"/>
 								</option>
 								<option id="gnu.cpp.link.option.paths.1130439766" name="Library search path (-L)" superClass="gnu.cpp.link.option.paths" valueType="libPaths">
 									<listOptionValue builtIn="false" value="/usr/local/lib"/>

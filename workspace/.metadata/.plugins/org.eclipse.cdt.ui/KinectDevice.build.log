@@ -1,0 +1,24 @@
+
+**** Build of configuration Debug for project KinectDevice ****
+
+make all 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include -I/usr/include -I/usr/local/include/opencv -I/usr/include/pcl-1.7 -I/usr/include/eigen3 -I/usr/include/vtk-5.8 -I/usr/include/ni -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o"main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building file: ../RawKinect/RawKinect.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include -I/usr/include -I/usr/local/include/opencv -I/usr/include/pcl-1.7 -I/usr/include/eigen3 -I/usr/include/vtk-5.8 -I/usr/include/ni -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"RawKinect/RawKinect.d" -MT"RawKinect/RawKinect.d" -o"RawKinect/RawKinect.o" "../RawKinect/RawKinect.cpp"
+Finished building: ../RawKinect/RawKinect.cpp
+ 
+Building file: ../Capture/DeviceCapture.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include -I/usr/include -I/usr/local/include/opencv -I/usr/include/pcl-1.7 -I/usr/include/eigen3 -I/usr/include/vtk-5.8 -I/usr/include/ni -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Capture/DeviceCapture.d" -MT"Capture/DeviceCapture.d" -o"Capture/DeviceCapture.o" "../Capture/DeviceCapture.cpp"
+Finished building: ../Capture/DeviceCapture.cpp
+ 
+Building target: KinectDevice
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -L/usr/lib -o"KinectDevice"  ./main.o  ./RawKinect/RawKinect.o  ./Capture/DeviceCapture.o   -lopencv_core -lopencv_imgproc -lopencv_highgui -lopencv_ml -lopencv_video -lopencv_features2d -lopencv_calib3d -lopencv_objdetect -lopencv_contrib -lopencv_legacy -lopencv_flann -lpcl_apps -lpcl_common -lpcl_features -lpcl_filters -lpcl_io -lpcl_kdtree -lpcl_keypoints -lpcl_octree -lpcl_registration -lpcl_sample_consensus -lpcl_search -lpcl_segmentation -lpcl_surface -lpcl_tracking -lpcl_visualization -lflann -lvtkRendering -lvtkGraphics -lvtkIO -lvtkFiltering -lvtkCommon -lvtksys -lboost_thread -lboost_system -lboost_filesystem -lboost_graph_parallel -ldl -lpthread -lrt -lOpenNI -lserial
+Finished building target: KinectDevice
+ 

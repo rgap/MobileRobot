@@ -1,0 +1,45 @@
+
+**** Build of configuration Debug for project CGAL_Testing ****
+
+make all 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include -I/usr/include -I/usr/local/include/opencv -I/usr/include/pcl-1.7 -I/usr/include/eigen3 -I/usr/include/vtk-5.8 -I/usr/include/ni -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o"main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: CGAL_Testing
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -L/usr/lib -o"CGAL_Testing"  ./main.o   -lCGAL -lpcl_apps -lpcl_common -lpcl_features -lpcl_filters -lpcl_io -lpcl_kdtree -lpcl_keypoints -lpcl_octree -lpcl_registration -lpcl_sample_consensus -lpcl_search -lpcl_segmentation -lpcl_surface -lpcl_tracking -lpcl_visualization -lflann -lvtkRendering -lvtkGraphics -lvtkIO -lvtkFiltering -lvtkCommon -lvtksys -lboost_thread -lboost_system -lboost_filesystem -lboost_graph_parallel -ldl -lpthread
+./main.o: En la función `CGAL::Gmpq_rep::Gmpq_rep()':
+/usr/include/CGAL/GMP/Gmpq_type.h:51: referencia a `__gmpq_init' sin definir
+./main.o: En la función `CGAL::Gmpq_rep::~Gmpq_rep()':
+/usr/include/CGAL/GMP/Gmpq_type.h:52: referencia a `__gmpq_clear' sin definir
+./main.o: En la función `CGAL::Gmpq::Gmpq(int)':
+/usr/include/CGAL/GMP/Gmpq_type.h:87: referencia a `__gmpq_set_si' sin definir
+./main.o: En la función `CGAL::Gmpq::Gmpq(double)':
+/usr/include/CGAL/GMP/Gmpq_type.h:133: referencia a `__gmpq_set_d' sin definir
+./main.o: En la función `CGAL::Gmpq::operator==(CGAL::Gmpq const&) const':
+/usr/include/CGAL/GMP/Gmpq_type.h:193: referencia a `__gmpq_equal' sin definir
+./main.o: En la función `CGAL::Gmpq::operator<(CGAL::Gmpq const&) const':
+/usr/include/CGAL/GMP/Gmpq_type.h:194: referencia a `__gmpq_cmp' sin definir
+./main.o: En la función `CGAL::Gmpq::operator==(int) const':
+/usr/include/CGAL/GMP/Gmpq_type.h:213: referencia a `__gmpq_cmp_si' sin definir
+./main.o: En la función `CGAL::Gmpq::operator-() const':
+/usr/include/CGAL/GMP/Gmpq_type.h:260: referencia a `__gmpq_neg' sin definir
+./main.o: En la función `CGAL::Gmpq::operator+=(CGAL::Gmpq const&)':
+/usr/include/CGAL/GMP/Gmpq_type.h:276: referencia a `__gmpq_add' sin definir
+./main.o: En la función `CGAL::Gmpq::operator-=(CGAL::Gmpq const&)':
+/usr/include/CGAL/GMP/Gmpq_type.h:286: referencia a `__gmpq_sub' sin definir
+./main.o: En la función `CGAL::Gmpq::operator*=(CGAL::Gmpq const&)':
+/usr/include/CGAL/GMP/Gmpq_type.h:296: referencia a `__gmpq_mul' sin definir
+./main.o: En la función `CGAL::Gmpq::operator/=(CGAL::Gmpq const&)':
+/usr/include/CGAL/GMP/Gmpq_type.h:307: referencia a `__gmpq_div' sin definir
+./main.o: En la función `CGAL::Real_embeddable_traits<CGAL::Gmpq>::To_interval::operator()(CGAL::Gmpq const&) const':
+/usr/include/CGAL/Gmpq.h:92: referencia a `mpfr_init2' sin definir
+/usr/include/CGAL/Gmpq.h:93: referencia a `mpfr_set_q' sin definir
+/usr/include/CGAL/Gmpq.h:94: referencia a `mpfr_get_d' sin definir
+/usr/include/CGAL/Gmpq.h:95: referencia a `mpfr_set_q' sin definir
+/usr/include/CGAL/Gmpq.h:96: referencia a `mpfr_get_d' sin definir
+/usr/include/CGAL/Gmpq.h:97: referencia a `mpfr_clear' sin definir
+collect2: error: ld returned 1 exit status
+make: *** [CGAL_Testing] Error 1

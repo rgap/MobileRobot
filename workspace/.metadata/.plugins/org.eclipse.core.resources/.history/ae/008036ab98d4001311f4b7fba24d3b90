@@ -1,0 +1,140 @@
+#include <CGAL/Exact_predicates_inexact_constructions_kernel.h>
+#include <CGAL/Mesh_triangulation_3.h>
+#include <CGAL/Mesh_complex_3_in_triangulation_3.h>
+#include <CGAL/Mesh_criteria_3.h>
+#include <CGAL/Implicit_mesh_domain_3.h>
+#include <CGAL/make_mesh_3.h>
+
+#include <map>
+#include <boost/bimap/bimap.hpp>
+#include <boost/bimap/multiset_of.hpp>
+#include <boost/iterator/transform_iterator.hpp>
+#include <boost/iterator/iterator_adaptor.hpp>
+
+#include <CGAL/iterator.h>
+
+#include <CGAL/Mesh_3/utilities.h>
+#include <CGAL/Mesh_3/Mesh_complex_3_in_triangulation_3_base.h>
+
+#include <CGAL/Mesh_3/global_parameters.h>
+#include <CGAL/Mesh_3/Mesher_3.h>
+#include <CGAL/optimize_mesh_3.h>
+
+// Domain
+typedef CGAL::Exact_predicates_inexact_constructions_kernel K;
+typedef K::FT FT;
+typedef K::Point_3 Point;
+typedef FT ( Function)(const Point&);
+typedef CGAL::Implicit_mesh_domain_3<Function, K> Mesh_domain;
+// Triangulation
+typedef CGAL::Mesh_triangulation_3<Mesh_domain>::type Tr;
+typedef CGAL::Mesh_complex_3_in_triangulation_3<Tr> C3t3;
+// Criteria
+typedef CGAL::Mesh_criteria_3<Tr> Mesh_criteria;
+
+// To avoid verbose function and named parameters call
+using namespace CGAL::parameters;
+
+// Function
+FT sphere_function(const Point& p) {
+	return CGAL::squared_distance(p, Point(CGAL::ORIGIN)) - 1;
+}
+
+int main() {
+	// Domain (Warning: Sphere_3 constructor uses squared radius !)
+	Mesh_domain domain(sphere_function, K::Sphere_3(CGAL::ORIGIN, 2));
+	// Mesh criteria
+	Mesh_criteria
+			criteria(facet_angle = 30, facet_size = 1,
+					facet_distance = 1, cell_radius_edge_ratio = 1,
+					cell_size = 1);
+
+	// Mesh generation - triangulation
+	C3t3 c3t3 = CGAL::make_mesh_3<C3t3>(domain, criteria);
+
+	cout<<"v : "<<c3t3.number_of_vertices_in_complex()<<endl;
+	cout<<"e : "<<c3t3.number_of_edges_in_complex()<<endl;
+
+
+
+	for (C3t3::Iterator_not_in_complex it = c3t3.edges_in_complex_begin(); it != c3t3.edges_in_complex_end(); ++it) {
+		Vertex_handle new_v;
+
+		this->triangulation().is_vertex(it->first->point(), new_v);
+		this->add_to_complex(new_v, it->second);
+	}
+
+	// Output
+	std::ofstream medit_file("out.mesh");
+	c3t3.output_to_medit(medit_file);
+	return 0;
+}
+
+/*#include <pcl/point_types.h>
+ #include <pcl/io/pcd_io.h>
+ #include <pcl/kdtree/kdtree_flann.h>
+ #include <pcl/features/normal_3d.h>
+ #include <pcl/surface/gp3.h>
+
+ #include <pcl/io/vtk_io.h>
+
+ int main(int argc, char** argv) {
+ // Load input file into a PointCloud<T> with an appropriate type
+ pcl::PointCloud<pcl::PointXYZ>::Ptr cloud(
+ new pcl::PointCloud<pcl::PointXYZ>);
+ pcl::PCLPointCloud2 cloud_blob;
+ pcl::io::loadPCDFile("bun0.pcd", cloud_blob);
+ pcl::fromPCLPointCloud2(cloud_blob, *cloud);
+ //* the data should be available in cloud
+
+ // Normal estimation*
+ pcl::NormalEstimation < pcl::PointXYZ, pcl::Normal > n;
+ pcl::PointCloud<pcl::Normal>::Ptr normals(new pcl::PointCloud<pcl::Normal>);
+ pcl::search::KdTree<pcl::PointXYZ>::Ptr tree(
+ new pcl::search::KdTree<pcl::PointXYZ>);
+ tree->setInputCloud(cloud);
+ n.setInputCloud(cloud);
+ n.setSearchMethod(tree);
+ n.setKSearch(20);
+ n.compute(*normals);
+ //* normals should not contain the point normals + surface curvatures
+
+ // Concatenate the XYZ and normal fields*
+ pcl::PointCloud<pcl::PointNormal>::Ptr cloud_with_normals(
+ new pcl::PointCloud<pcl::PointNormal>);
+ pcl::concatenateFields(*cloud, *normals, *cloud_with_normals);
+ //* cloud_with_normals = cloud + normals
+
+ // Create search tree*
+ pcl::search::KdTree<pcl::PointNormal>::Ptr tree2(
+ new pcl::search::KdTree<pcl::PointNormal>);
+ tree2->setInputCloud(cloud_with_normals);
+
+ // Initialize objects
+ pcl::GreedyProjectionTriangulation < pcl::PointNormal > gp3;
+ pcl::PolygonMesh triangles;
+
+ // Set the maximum distance between connected points (maximum edge length)
+ gp3.setSearchRadius(0.025);
+
+ // Set typical values for the parameters
+ gp3.setMu(2.5);
+ gp3.setMaximumNearestNeighbors(100);
+ gp3.setMaximumSurfaceAngle(M_PI / 4); // 45 degrees
+ gp3.setMinimumAngle(M_PI / 18); // 10 degrees
+ gp3.setMaximumAngle(2 * M_PI / 3); // 120 degrees
+ gp3.setNormalConsistency(false);
+
+ // Get result
+ gp3.setInputCloud(cloud_with_normals);
+ gp3.setSearchMethod(tree2);
+ gp3.reconstruct(triangles);
+
+ // Additional vertex information
+ std::vector<int> parts = gp3.getPartIDs();
+ std::vector<int> states = gp3.getPointStates();
+ //pcl::io::saveVTKFile("mesh.vtk", triangles);
+
+ return (0);
+ }
+ */
