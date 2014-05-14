@@ -1,0 +1,147 @@
+#include <iostream>
+#include <pcl/io/pcd_io.h>
+#include <pcl/point_types.h>
+#include <pcl/console/parse.h>
+#include <boost/thread/thread.hpp>
+#include <pcl/filters/extract_indices.h>
+#include <pcl/sample_consensus/ransac.h>
+//#include <pcl/visualization/pcl_visualizer.h>  // deprecated, treba nahradit
+#include <pcl/sample_consensus/sac_model_plane.h>
+#include <pcl/sample_consensus/sac_model_sphere.h>
+#include <pcl/filters/voxel_grid.h>
+#include <pcl/segmentation/extract_clusters.h>
+
+using namespace std;
+
+int main(int argc, char** argv) {
+
+	/*
+	 if (argc < 2) {
+	 cout << "Not enough parameters";
+	 return 0;
+	 }
+	 */
+
+	pcl::PCDReader reader;
+	pcl::PointCloud<pcl::PointXYZ>::Ptr cloud(
+			new pcl::PointCloud<pcl::PointXYZ>), cloud_f(
+			new pcl::PointCloud<pcl::PointXYZ>);
+
+	reader.read(
+			"/home/rgap/REPOSITORIES/MobileRobot/bin/clusters_kdtree/cloud_cluster_4.pcd",
+			*cloud);
+	cout << "PointCloud before filtering has: " << cloud->points.size()
+			<< " data points." << endl;
+
+	pcl::VoxelGrid<pcl::PointXYZ> vg;
+	vg.setInputCloud(cloud);
+	vg.setLeafSize(0.01f, 0.01f, 0.01f);
+	vg.filter(*cloud);
+	cout << "PointCloud after filtering has: " << cloud->points.size()
+			<< " data points." << endl;
+
+	////////////////////////////////////////////////////////////
+	pcl::search::KdTree<pcl::PointXYZ>::Ptr tree(
+			new pcl::search::KdTree<pcl::PointXYZ>);
+	tree->setInputCloud(cloud);
+
+	vector<pcl::PointIndices> cluster_indices;
+	pcl::EuclideanClusterExtraction<pcl::PointXYZ> ec;
+	ec.setClusterTolerance(0.02); // 2cm
+	ec.setMinClusterSize(100);
+	ec.setMaxClusterSize(25000);
+	ec.setSearchMethod(tree);
+	ec.setInputCloud(cloud);
+	ec.extract(cluster_indices);
+
+	cout << "# Clusters : " << cluster_indices.size() << endl;
+
+	pcl::PCDWriter writer;
+	int i = 0;
+	for (vector<pcl::PointIndices>::const_iterator it = cluster_indices.begin(); it
+			!= cluster_indices.end(); ++it) {
+		pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_cluster(
+				new pcl::PointCloud<pcl::PointXYZ>);
+		for (vector<int>::const_iterator pit = it->indices.begin(); pit
+				!= it->indices.end(); pit++)
+			cloud_cluster->points.push_back(cloud->points[*pit]);
+		cloud_cluster->width = cloud_cluster->points.size();
+		cloud_cluster->height = 1;
+		cloud_cluster->is_dense = true;
+
+		cout << "PointCloud representing the Cluster #" << i << " with "
+				<< cloud_cluster->points.size() << " data points." << endl;
+		stringstream ss;
+		ss << "cloud_cluster_" << i << ".pcd";
+		writer.write<pcl::PointXYZ> (ss.str(), *cloud_cluster, false);
+		i++;
+	}
+
+	return (0);
+}
+
+/*
+ #include <pcl/point_types.h>
+ #include <pcl/io/pcd_io.h>
+ #include <pcl/kdtree/kdtree_flann.h>
+ #include <pcl/features/normal_3d.h>
+ #include <pcl/surface/gp3.h>
+
+ int main(int argc, char** argv) {
+ pcl::PointCloud<pcl::PointXYZ>::Ptr cloud(
+ new pcl::PointCloud<pcl::PointXYZ>);
+ pcl::PCLPointCloud2 cloud_blob;
+ pcl::io::loadPCDFile("bun0.pcd", cloud_blob);
+ pcl::fromPCLPointCloud2(cloud_blob, *cloud);
+
+ // Normal estimation
+ pcl::NormalEstimation<pcl::PointXYZ, pcl::Normal> n;
+ pcl::PointCloud<pcl::Normal>::Ptr normals(new pcl::PointCloud<pcl::Normal>);
+ pcl::search::KdTree<pcl::PointXYZ>::Ptr tree(
+ new pcl::search::KdTree<pcl::PointXYZ>);
+ tree->setInputCloud(cloud);
+ n.setInputCloud(cloud);
+ n.setSearchMethod(tree);
+ n.setKSearch(20);
+ n.compute(*normals);
+ // Normals should not contain the point normals + surface curvatures
+
+ // Concatenate the XYZ and normal fields
+ pcl::PointCloud<pcl::PointNormal>::Ptr cloud_with_normals(
+ new pcl::PointCloud<pcl::PointNormal>);
+ pcl::concatenateFields(*cloud, *normals, *cloud_with_normals);
+ // cloud_with_normals = cloud + normals
+
+ // Create search tree
+ pcl::search::KdTree<pcl::PointNormal>::Ptr tree2(
+ new pcl::search::KdTree<pcl::PointNormal>);
+ tree2->setInputCloud(cloud_with_normals);
+
+ // Initialize objects
+ pcl::GreedyProjectionTriangulation<pcl::PointNormal> gp3;
+ pcl::PolygonMesh triangles;
+
+ // Set the maximum distance between connected points (maximum edge length)
+ gp3.setSearchRadius(0.025);
+
+ // Set typical values for the parameters
+ gp3.setMu(2.5);
+ gp3.setMaximumNearestNeighbors(100);
+ gp3.setMaximumSurfaceAngle(M_PI / 4); // 45 degrees
+ gp3.setMinimumAngle(M_PI / 18); // 10 degrees
+ gp3.setMaximumAngle(2 * M_PI / 3); // 120 degrees
+ gp3.setNormalConsistency(false);
+
+ // Get result
+ gp3.setInputCloud(cloud_with_normals);
+ gp3.setSearchMethod(tree2);
+ gp3.reconstruct(triangles);
+
+ // Additional vertex information
+ vector<int> parts = gp3.getPartIDs();
+ vector<int> states = gp3.getPointStates();
+
+ // Finish
+ return (0);
+ }
+ */

@@ -7,6 +7,7 @@
 
 #include "RobotFSM.h"
 
+
 using namespace cv;
 using namespace std;
 
@@ -33,6 +34,7 @@ void RobotFSM::planWithEnvironment(Point3f *pointNearestCan,
 			if ((frameWidth / 2 - boundRect[i].br().x) < rangoGiro) {
 				cout << "TURN RIGHT & GO BACKWARD" << endl; //TURN RIGHT
 				//cout << "OBSTACLE DETECTED" << endl;
+
 			}
 		} else { // LADO DERECHO
 			if ((boundRect[i].tl().x - frameWidth / 2) < rangoGiro) {

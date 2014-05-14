@@ -25,15 +25,15 @@ using namespace std;
 //////////////////////////////// GUI
 ModelParameters* P = new ModelParameters();
 
-/*
- //setMouseCallback("imgMaxDepth", onMouseDistance, 0);
- void onMouseDistance(int event, int x, int y, int flags, void*) {
- if (event == CV_EVENT_LBUTTONUP){
- Vec3f *s = vision.world.ptr<Vec3f> (y);
- cout << s[x][0] << " " << s[x][1] << " " << s[x][2] << endl;
- }
- }
- */
+//////////////////////////////// DOC
+#define showFrame(namewindow, path, img) \
+	if(showFrame) imshow(namewindow, img); if(save) imwrite(path, img);
+
+#define keyboardActions(k) \
+		if (save) save = 0;\
+		if (k == 'q') save = 1;\
+		else if (k == 'w') showFrame = !showFrame;
+
 
 void initCallbacks() {
 	namedWindow("PARAMS_CAN");
@@ -102,85 +102,53 @@ void frameLoop() {
 	vision.setParameters(P);
 	initCallbacks();
 
-	int k, saveTesting = 0;
+	int k, save = 0, showFrame = 1;
 	while (1) {
 
 		device.verifyState();
 		P->updateParameters();
 
 		vision.imgBGR = device.getBGRFrame();
-		imshow("imgBGR", vision.imgBGR);
-		if (saveTesting)
-			imwrite("TESTS/1_imgBGR.png", vision.imgBGR);
+		showFrame("imgBGR", "TESTS/1_imgBGR.png", vision.imgBGR);
 
 		vision.applyGaussBlur(vision.imgBGR, vision.imgBGR_Blur);
-		imshow("imgBGR_Blur", vision.imgBGR_Blur);
-		if (saveTesting)
-			imwrite("TESTS/1_imgBGR_Blur.png", vision.imgBGR_Blur);
+		showFrame("imgBGR_Blur", "TESTS/1_imgBGR_Blur.png", vision.imgBGR_Blur);
 
-		vision.applySSR(vision.imgBGR_Blur, vision.imgBGR_Enh);
-		imshow("imgBGR_Enh", vision.imgBGR_Enh);
-		if (saveTesting)
-			imwrite("TESTS/1_imgBGR_Enh.png", vision.imgBGR_Enh);
-
-		vision.applyColorSegmentation_HSV(vision.imgBGR_Enh,
+		vision.applyColorSegmentation_HSV(vision.imgBGR_Blur,
 				vision.imgSegColor_Can);
-		imshow("can_HSV", vision.imgSegColor_Can);
-		if (saveTesting)
-			imwrite("TESTS/1_imgSegColor_Can.png", vision.imgSegColor_Can);
+		showFrame("can_HSV", "TESTS/1_imgSegColor_Can.png", vision.imgSegColor_Can);
 
 		{
 			vision.world = device.getDepthFrame();
 
 			vision.getColorizeDisparity(device.getDisparityMap());
-			imshow("dispColor", vision.disparityColorized);
-			if (saveTesting)
-				imwrite("TESTS/1_disparityColorized.png", vision.disparityColorized);
-
-			// Occlusion Filling
-			//vision.applyFillOcclusion(vision.world);
+			showFrame("dispColor", "TESTS/1_disparityColorized.png", vision.disparityColorized);
 
 			////////////////////////////////////// RANGO DE VISION
 			vision.applyDepthThresholding(vision.world, vision.imgMaxDepth);
-			imshow("imgMaxDepth", vision.imgMaxDepth);
-			if (saveTesting)
-				imwrite("TESTS/1_imgMaxDepth.png", vision.imgMaxDepth);
+			showFrame("imgMaxDepth", "TESTS/1_imgMaxDepth.png", vision.imgMaxDepth);
 
 			vision.applyShapeSegmentation(vision.imgSegColor_Can,
 					vision.imgSegShape_Can);
-			imshow("imgSegShape_Can", vision.imgSegShape_Can);
-			imshow("imgBGR_cans_detected", vision.imgBGR);
+			showFrame("imgSegShape_Can", "TESTS/1_imgSegShape_Can.png", vision.imgSegShape_Can);
+			showFrame("imgBGR_cans_detected", "TESTS/1_imgBGR_cans_detected.png", vision.imgBGR);
 
-			if (saveTesting)
-				imwrite("TESTS/1_imgSegShape_Can.png", vision.imgSegShape_Can);
-			if (saveTesting)
-				imwrite("TESTS/1_imgBGR_cans_detected.png", vision.imgBGR);
-
-			//vision.applyCloudDownsampling();
+			vision.applyCloudDownsampling();
 
 			////////////////////////////////////// OBTACLE RECOGNITION
 			vision.applyObstacleRecognition(vision.imgBGR_Blur, vision.world,
 					vision.imgSegShape_Can, vision.imgObstaclesBin);
-			imshow("imgObstaclesBin", vision.imgObstaclesBin);
-			imshow("imgPlane", vision.imgPlane);
 
-			if (saveTesting)
-				imwrite("TESTS/1_imgObstaclesBin.png", vision.imgObstaclesBin);
-			if (saveTesting)
-				imwrite("TESTS/1_imgPlane.png", vision.imgPlane);
+			showFrame("imgObstaclesBin", "TESTS/1_imgObstaclesBin.png", vision.imgObstaclesBin);
+			showFrame("imgPlane", "TESTS/1_imgPlane.png", vision.imgPlane);
 		}
 		{
 			//robot.planWithEnvironment(vision.getPointNearestCan(),
 			//		vision.imgObstaclesBin);
 		}
 
-		if (saveTesting)
-			saveTesting = 0;
-
 		k = cv::waitKey(1);
-		if (k == ' ') {
-			saveTesting = 1;
-		}
+		keyboardActions(k);
 	}
 }
 
