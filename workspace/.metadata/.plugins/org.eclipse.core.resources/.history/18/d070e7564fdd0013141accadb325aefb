@@ -1,0 +1,16 @@
+#include <cv.h>
+#include <highgui.h>
+#include <XnCppWrapper.h>
+
+using namespace std;
+using namespace cv;
+
+int main() {
+	VideoCapture Cap(CV_CAP_OPENNI);
+	if (!Cap.isOpened()) {
+		cout << "wrong";
+	}
+
+	waitKey(0);
+	return 0;
+}

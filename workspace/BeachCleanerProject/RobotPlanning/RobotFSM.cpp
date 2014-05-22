@@ -7,15 +7,21 @@
 
 #include "RobotFSM.h"
 
-
 using namespace cv;
 using namespace std;
 
 RobotFSM::RobotFSM() {
 }
 
-void RobotFSM::planWithEnvironment(Point3f *pointNearestCan,
+void RobotFSM::setDevicePath(std::string devicePath) {
+	dev.setDevice(devicePath);
+	dev.initializeSerialDevice();
+}
+
+int RobotFSM::planWithEnvironment(Point3f *pointNearestCan,
 		Mat &imgObstaclesBin) {
+
+	int withObstacle = 0;
 
 	int frameWidth = imgObstaclesBin.cols, rangoGiro = 150, i;
 	imgObstaclesBin_temp = imgObstaclesBin.clone();
@@ -33,17 +39,20 @@ void RobotFSM::planWithEnvironment(Point3f *pointNearestCan,
 
 			if ((frameWidth / 2 - boundRect[i].br().x) < rangoGiro) {
 				cout << "TURN RIGHT & GO BACKWARD" << endl; //TURN RIGHT
+				(*dev.serialStream) << GIRO_DER;
 				//cout << "OBSTACLE DETECTED" << endl;
-
 			}
 		} else { // LADO DERECHO
 			if ((boundRect[i].tl().x - frameWidth / 2) < rangoGiro) {
 				cout << "TURN LEFT & GO BACKWARD" << endl; //TURN LEFT
-				//cout << "OBSTACLE DETECTED" << endl;
+				(*dev.serialStream) << GIRO_IZQ;
+				//cout << "OBSTACLE DETECTED" << endl;}
 			}
 		}
 	}
-
+	if (!contours.empty())
+		withObstacle = 1;
+	return withObstacle;
 }
 
 RobotFSM::~RobotFSM() {

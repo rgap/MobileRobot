@@ -18,18 +18,19 @@ void DepthSensing::visualizePointCloud() {
 
 // OBSTACULOS
 
-void DepthSensing::cloudDownsampling() {
-	//pointCloud->fillCloud(imgColor, world, imgMaxDepth, maxDepthDetected);
-	//voxelDownsampling.downSample(pointCloud->cloud);
+void DepthSensing::fillPointCloud(Mat& imgColor, Mat& world, Mat &imgMaxDepth){
+	//pointCloud->dumbFill();
+	pointCloud->fillCloud(imgColor, world, imgMaxDepth, maxDepthDetected);
 }
 
-void DepthSensing::segmentObstacles(Mat& imgColor, Mat& world,
+void DepthSensing::cloudDownsampling() {
+	voxelDownsampling.downSample(pointCloud->cloud);
+}
+
+void DepthSensing::segmentObstacles(Mat& world,
 		Mat& notObstacleBin, Mat &imgMaxDepth, Mat& imgObstaclesBin,
 		Mat& imgPlane, float maxDistObstacle, float maxHeightFloor,
 		float distThreshold, float epsAngle, int axisVal) {
-
-	pointCloud->fillCloud(imgColor, world, imgMaxDepth, maxDepthDetected);
-	//pointCloud->dumbFill();
 
 	sac_method.applyRANSAC(pointCloud->cloud, distThreshold, epsAngle, axisVal); // Plane detection
 

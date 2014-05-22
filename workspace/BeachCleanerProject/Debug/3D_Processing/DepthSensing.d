@@ -83,7 +83,9 @@
  /usr/include/pcl-1.7/pcl/search/search.h \
  /usr/include/pcl-1.7/pcl/sample_consensus/ransac.h \
  /usr/include/pcl-1.7/pcl/sample_consensus/sac_model_plane.h \
- /usr/include/pcl-1.7/pcl/sample_consensus/sac_model_sphere.h
+ /usr/include/pcl-1.7/pcl/sample_consensus/sac_model_sphere.h \
+ ../3D_Processing/CloudDownsampling/VoxelDownsampling.h \
+ /usr/include/pcl-1.7/pcl/filters/voxel_grid.h
 
 ../3D_Processing/DepthSensing.h:
 
@@ -264,3 +266,7 @@
 /usr/include/pcl-1.7/pcl/sample_consensus/sac_model_plane.h:
 
 /usr/include/pcl-1.7/pcl/sample_consensus/sac_model_sphere.h:
+
+../3D_Processing/CloudDownsampling/VoxelDownsampling.h:
+
+/usr/include/pcl-1.7/pcl/filters/voxel_grid.h:

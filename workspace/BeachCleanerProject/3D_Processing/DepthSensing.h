@@ -5,7 +5,7 @@
 #include "PointCloudRGB.h"
 #include "PointCloudGrayscale.h"
 #include "SACMethod/SAC_MethodXYZ.h"
-//#include "CloudDownsampling/VoxelDownsampling.h"
+#include "CloudDownsampling/VoxelDownsampling.h"
 
 /*! \class Class DepthSensing - DepthSensing.h
  *  \brief Entradas del sensor de profundidad
@@ -16,7 +16,7 @@ class DepthSensing {
 private:
 	PCType* pointCloud;
 	SAC_MethodXYZ sac_method;
-	//VoxelDownsampling voxelDownsampling;
+	VoxelDownsampling voxelDownsampling;
 	float maxDepthDetected;
 
 public:
@@ -26,11 +26,13 @@ public:
 	////////////////////
 	void colorizeDisparity(const cv::Mat& gray, cv::Mat& rgb,
 			double maxDisp = -1.f, float S = 1.f, float V = 1.f);
+
+	void fillPointCloud(Mat& imgColor, Mat& world, Mat &imgMaxDepth);
 	void cloudDownsampling();
-	void segmentObstacles(Mat& imgColor, Mat& world, Mat& notObstacleBin,
-			Mat &imgMaxDepth, Mat& imgObstaclesBin, Mat& imgPlane,
-			float maxDistObstacle, float maxHeightFloor, float distThreshold,
-			float epsAngle, int axisVal);
+	void segmentObstacles(Mat& world, Mat& notObstacleBin, Mat &imgMaxDepth,
+			Mat& imgObstaclesBin, Mat& imgPlane, float maxDistObstacle,
+			float maxHeightFloor, float distThreshold, float epsAngle,
+			int axisVal);
 	//////////////////// PointCloud
 	void visualizePointCloud();
 	virtual ~DepthSensing();

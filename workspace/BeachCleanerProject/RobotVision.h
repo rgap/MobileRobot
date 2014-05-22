@@ -63,6 +63,7 @@ public:
 	//////////////////////// DEPTH
 	void applyDepthThresholding(Mat &world, Mat &imgMaxDepth);
 	void applyDepthRefinement(Mat &world);
+	void fillPointCloud(Mat& imgColor, Mat& world, Mat &imgMaxDepth);
 
 	void applyCloudDownsampling();
 	void applyObstacleRecognition(Mat& imgColor, Mat& world,

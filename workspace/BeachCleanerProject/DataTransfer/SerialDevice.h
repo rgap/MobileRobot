@@ -13,10 +13,11 @@
 
 class SerialDevice {
 private:
-	std::string path_device_;
+	std::string devicePath;
 public:
-	LibSerial::SerialStream *serialStream;
-	SerialDevice(std::string device); //"/dev/ttyACM1"
+	LibSerial::SerialStream* serialStream;
+	SerialDevice(); //"/dev/ttyACM1"
+	void setDevice(std::string devicePath_);
 	void initializeSerialDevice();
 	virtual ~SerialDevice();
 };

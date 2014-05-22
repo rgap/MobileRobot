@@ -16,6 +16,10 @@ RobotVision::RobotVision() {
 	//patternRecognition = new PatternRecognition();
 }
 
+void RobotVision::fillPointCloud(Mat& imgColor, Mat& world, Mat &imgMaxDepth) {
+	depthSensing->fillPointCloud(imgColor, world, imgMaxDepth);
+}
+
 void RobotVision::applyCloudDownsampling() {
 	depthSensing->cloudDownsampling();
 }
@@ -23,7 +27,7 @@ void RobotVision::applyCloudDownsampling() {
 void RobotVision::applyObstacleRecognition(Mat& imgColor, Mat& world,
 		Mat& notObstaclesBin, Mat& imgObstaclesBin) {
 	imgObstaclesBin.setTo(cv::Scalar(0));
-	depthSensing->segmentObstacles(imgColor, world, notObstaclesBin,
+	depthSensing->segmentObstacles(world, notObstaclesBin,
 			imgMaxDepth, imgObstaclesBin, imgPlane, P->maxDistObstacle,
 			P->maxHeightFloor, P->distThreshold, P->epsAngle, P->axisVal);
 	depthSensing->visualizePointCloud();
