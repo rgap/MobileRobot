@@ -1,0 +1,84 @@
+/*
+ * RobotVision
+ *
+ *  Created on: 30/12/2013
+ *      Author: rgap
+ */
+
+#ifndef ROBOTVISION_H_
+#define ROBOTVISION_H_
+
+#include <opencv2/opencv.hpp>
+#include "ModelParameters.h"
+#include "2D_Processing/PreProcess.h"
+#include "2D_Processing/CanRecognition.h"
+#include "3D_Processing/DepthSensing.h"
+
+using namespace cv;
+
+class RobotVision {
+public:
+
+	cv::Mat imgBGR;
+
+	cv::Mat imgBGR_valid;
+	cv::Mat imgBGR_Enh;
+	cv::Mat imgBGR_Blur;
+
+	//////////////////////////////////// SEGMENTATION
+	cv::Mat imgBGR_Can;
+	cv::Mat imgSegColor_Can;
+	cv::Mat imgSegShape_Can;
+	cv::Mat world;
+	cv::Mat imgMaxDepth;
+	cv::Mat imgThresh_momentos;
+	cv::Mat imgThresh_resClasif;
+	cv::Mat imgObstaclesBin;
+	cv::Mat imgPlane;
+
+	//////////////////////////////////// OTHER
+	cv::Mat disparityColorized;
+
+private:
+
+	PreProcess* preprocess;
+	CanRecognition* canRecognition;
+	DepthSensing* depthSensing;
+	////////////////////////////////
+	//PatternRecognition* patternRecognition;
+	ModelParameters* P;
+
+public:
+
+	RobotVision();
+
+	void applyGaussBlur(Mat &imgIni, Mat &imgRes);
+	void applyBilateralFilter(Mat &imgIni, Mat &imgRes);
+	void applySSR(Mat &imgIni, Mat &imgRes);
+
+	//////////////////////// SEGMENTATION
+	void applyColorSegmentation_HSV(Mat &imgIni, Mat &imgRes);
+	void applyShapeSegmentation(Mat &imgIni, Mat &imgRes);
+
+	//////////////////////// DEPTH
+	void applyDepthThresholding(Mat &world, Mat &imgMaxDepth);
+	void applyDepthRefinement(Mat &world);
+	void fillPointCloud(Mat& imgColor, Mat& world, Mat &imgMaxDepth);
+
+	void applyCloudDownsampling();
+	void applyObstacleRecognition(Mat& imgColor, Mat& world,
+			Mat& notObstaclesBin, Mat& imgObstaclesBin);
+
+	//////////////////////// ENVIRONMENT
+	Rect *getRectNearestCan();
+	Rect *getRectNearestObstacle();
+
+	//////////////////////// OTHERS
+	void getColorizeDisparity(Mat &disparityMap);
+
+	void initializeVision(cv::Size &szFrame);
+	void setParameters(ModelParameters* P);
+	virtual ~RobotVision();
+};
+
+#endif /* ROBOTVISION_H_ */

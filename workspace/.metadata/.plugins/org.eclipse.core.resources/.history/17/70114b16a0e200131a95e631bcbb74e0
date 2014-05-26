@@ -1,0 +1,17 @@
+/*
+ * Timer.cpp
+ *
+ *  Created on: 23/05/2014
+ *      Author: rgap
+ */
+
+#include "Timer.h"
+
+Timer::Timer() {
+	// TODO Auto-generated constructor stub
+
+}
+
+Timer::~Timer() {
+	// TODO Auto-generated destructor stub
+}

@@ -1,0 +1,10 @@
+#include <cv.h>
+#include <highgui.h>
+
+using namespace std;
+using namespace cv;
+
+int main() {
+
+	return 0;
+}

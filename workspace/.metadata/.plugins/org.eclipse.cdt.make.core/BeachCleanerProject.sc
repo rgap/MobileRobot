@@ -12,11 +12,15 @@
 <includePath path="/usr/include"/>
 <definedSymbol symbol="__STDC__=1"/>
 <definedSymbol symbol="__cplusplus=199711L"/>
+<definedSymbol symbol="__cplusplus=1"/>
 <definedSymbol symbol="__STDC_HOSTED__=1"/>
 <definedSymbol symbol="__GNUC__=4"/>
 <definedSymbol symbol="__GNUC_MINOR__=8"/>
+<definedSymbol symbol="__GNUC_MINOR__=6"/>
 <definedSymbol symbol="__GNUC_PATCHLEVEL__=1"/>
+<definedSymbol symbol="__GNUC_PATCHLEVEL__=3"/>
 <definedSymbol symbol="__VERSION__=&quot;4.8.1&quot;"/>
+<definedSymbol symbol="__VERSION__=&quot;4.6.3&quot;"/>
 <definedSymbol symbol="__ATOMIC_RELAXED=0"/>
 <definedSymbol symbol="__ATOMIC_SEQ_CST=5"/>
 <definedSymbol symbol="__ATOMIC_ACQUIRE=2"/>
@@ -44,6 +48,7 @@
 <definedSymbol symbol="__SIZE_TYPE__=unsigned int"/>
 <definedSymbol symbol="__PTRDIFF_TYPE__=int"/>
 <definedSymbol symbol="__WCHAR_TYPE__=long int"/>
+<definedSymbol symbol="__WCHAR_TYPE__=int"/>
 <definedSymbol symbol="__WINT_TYPE__=unsigned int"/>
 <definedSymbol symbol="__INTMAX_TYPE__=long long int"/>
 <definedSymbol symbol="__UINTMAX_TYPE__=long long unsigned int"/>
@@ -87,6 +92,7 @@
 <definedSymbol symbol="__LONG_MAX__=2147483647L"/>
 <definedSymbol symbol="__LONG_LONG_MAX__=9223372036854775807LL"/>
 <definedSymbol symbol="__WCHAR_MAX__=2147483647L"/>
+<definedSymbol symbol="__WCHAR_MAX__=2147483647"/>
 <definedSymbol symbol="__WCHAR_MIN__=(-__WCHAR_MAX__ - 1)"/>
 <definedSymbol symbol="__WINT_MAX__=4294967295U"/>
 <definedSymbol symbol="__WINT_MIN__=0U"/>
@@ -249,6 +255,7 @@
 <definedSymbol symbol="__STDC_IEC_559_COMPLEX__=1"/>
 <definedSymbol symbol="__STDC_ISO_10646__=201103L"/>
 <definedSymbol symbol="__STDC_NO_THREADS__=1"/>
+<definedSymbol symbol="_FORTIFY_SOURCE=2"/>
 </collector>
 </instance>
 <instance id="cdt.managedbuild.config.gnu.exe.debug.1968723192;cdt.managedbuild.config.gnu.exe.debug.1968723192.;cdt.managedbuild.tool.gnu.c.compiler.exe.debug.1056264265;cdt.managedbuild.tool.gnu.c.compiler.input.473302411">
@@ -262,8 +269,11 @@
 <definedSymbol symbol="__STDC_HOSTED__=1"/>
 <definedSymbol symbol="__GNUC__=4"/>
 <definedSymbol symbol="__GNUC_MINOR__=8"/>
+<definedSymbol symbol="__GNUC_MINOR__=6"/>
 <definedSymbol symbol="__GNUC_PATCHLEVEL__=1"/>
+<definedSymbol symbol="__GNUC_PATCHLEVEL__=3"/>
 <definedSymbol symbol="__VERSION__=&quot;4.8.1&quot;"/>
+<definedSymbol symbol="__VERSION__=&quot;4.6.3&quot;"/>
 <definedSymbol symbol="__ATOMIC_RELAXED=0"/>
 <definedSymbol symbol="__ATOMIC_SEQ_CST=5"/>
 <definedSymbol symbol="__ATOMIC_ACQUIRE=2"/>
@@ -290,6 +300,7 @@
 <definedSymbol symbol="__SIZE_TYPE__=unsigned int"/>
 <definedSymbol symbol="__PTRDIFF_TYPE__=int"/>
 <definedSymbol symbol="__WCHAR_TYPE__=long int"/>
+<definedSymbol symbol="__WCHAR_TYPE__=int"/>
 <definedSymbol symbol="__WINT_TYPE__=unsigned int"/>
 <definedSymbol symbol="__INTMAX_TYPE__=long long int"/>
 <definedSymbol symbol="__UINTMAX_TYPE__=long long unsigned int"/>
@@ -329,6 +340,7 @@
 <definedSymbol symbol="__LONG_MAX__=2147483647L"/>
 <definedSymbol symbol="__LONG_LONG_MAX__=9223372036854775807LL"/>
 <definedSymbol symbol="__WCHAR_MAX__=2147483647L"/>
+<definedSymbol symbol="__WCHAR_MAX__=2147483647"/>
 <definedSymbol symbol="__WCHAR_MIN__=(-__WCHAR_MAX__ - 1)"/>
 <definedSymbol symbol="__WINT_MAX__=4294967295U"/>
 <definedSymbol symbol="__WINT_MIN__=0U"/>
@@ -490,6 +502,7 @@
 <definedSymbol symbol="__STDC_IEC_559_COMPLEX__=1"/>
 <definedSymbol symbol="__STDC_ISO_10646__=201103L"/>
 <definedSymbol symbol="__STDC_NO_THREADS__=1"/>
+<definedSymbol symbol="_FORTIFY_SOURCE=2"/>
 </collector>
 </instance>
 <instance id="cdt.managedbuild.config.gnu.exe.release.1866607872;cdt.managedbuild.config.gnu.exe.release.1866607872.;cdt.managedbuild.tool.gnu.cpp.compiler.exe.release.745327213;cdt.managedbuild.tool.gnu.cpp.compiler.input.998540256">

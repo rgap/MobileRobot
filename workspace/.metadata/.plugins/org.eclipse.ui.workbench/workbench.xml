@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workbench progressCount="19" version="2.0">
 <workbenchAdvisor/>
-<window height="768" maximized="true" width="755" x="611" y="0">
+<window height="718" width="857" x="509" y="28">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="160"/>
@@ -12,7 +12,7 @@
 <coolItem id="additions" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.cdt.ui.CElementCreationActionSet" itemType="typeToolBarContribution" x="156" y="30"/>
 <coolItem id="org.eclipse.cdt.ui.buildConfigActionSet" itemType="typeToolBarContribution" x="82" y="30"/>
-<coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="156" y="30"/>
+<coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="245" y="30"/>
 <coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="104" y="30"/>
 <coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="124" y="30"/>
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
@@ -32,7 +32,6 @@
 <part id="0"/>
 <part id="1"/>
 <part id="2"/>
-<part id="20"/>
 <part id="3"/>
 <part id="4"/>
 <part id="5"/>
@@ -42,111 +41,72 @@
 <part id="9"/>
 <part id="10"/>
 <part id="11"/>
-<part id="18"/>
 <part id="12"/>
 <part id="13"/>
 <part id="14"/>
-<part id="15"/>
-<part id="16"/>
-<part id="17"/>
-<part id="19"/>
-<part id="21"/>
-<part id="22"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="main.cpp" partName="main.cpp" path="/home/rgap/REPOSITORIES/MobileRobot/workspace/BeachCleanerProject/main.cpp" title="main.cpp" tooltip="BeachCleanerProject/main.cpp" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/BeachCleanerProject/main.cpp"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="5445" selectionTopPixel="2304"/>
+<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="main.cpp" partName="main.cpp" path="/home/rgap/REPOSITORIES/MobileRobot/workspace/BeachCleanerProject _enr/main.cpp" title="main.cpp" tooltip="BeachCleanerProject _enr/main.cpp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/BeachCleanerProject _enr/main.cpp"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1931" selectionTopPixel="867"/>
 </editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="DeviceCapture.cpp" partName="DeviceCapture.cpp" path="/home/rgap/REPOSITORIES/MobileRobot/workspace/BeachCleanerProject/Capture/DeviceCapture.cpp" title="DeviceCapture.cpp" tooltip="BeachCleanerProject/Capture/DeviceCapture.cpp" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/BeachCleanerProject/Capture/DeviceCapture.cpp"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="370" selectionTopPixel="58"/>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="RobotFSM.cpp" partName="RobotFSM.cpp" path="/home/rgap/REPOSITORIES/MobileRobot/workspace/BeachCleanerProject _enr/RobotPlanning/RobotFSM.cpp" title="RobotFSM.cpp" tooltip="BeachCleanerProject _enr/RobotPlanning/RobotFSM.cpp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/BeachCleanerProject _enr/RobotPlanning/RobotFSM.cpp"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1164" selectionTopPixel="731"/>
 </editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="DeviceCapture.h" partName="DeviceCapture.h" path="/home/rgap/REPOSITORIES/MobileRobot/workspace/BeachCleanerProject/Capture/DeviceCapture.h" title="DeviceCapture.h" tooltip="BeachCleanerProject/Capture/DeviceCapture.h" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/BeachCleanerProject/Capture/DeviceCapture.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="7" selectionOffset="314" selectionTopPixel="206"/>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="ActionControl.cpp" partName="ActionControl.cpp" path="/home/rgap/REPOSITORIES/MobileRobot/workspace/BeachCleanerProject _enr/RobotPlanning/ActionControl.cpp" title="ActionControl.cpp" tooltip="BeachCleanerProject _enr/RobotPlanning/ActionControl.cpp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/BeachCleanerProject _enr/RobotPlanning/ActionControl.cpp"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="103" selectionTopPixel="0"/>
 </editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="RobotVision.cpp" partName="RobotVision.cpp" path="/home/rgap/REPOSITORIES/MobileRobot/workspace/BeachCleanerProject/RobotVision.cpp" title="RobotVision.cpp" tooltip="BeachCleanerProject/RobotVision.cpp" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/BeachCleanerProject/RobotVision.cpp"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="958" selectionTopPixel="1369"/>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="DeviceCapture.cpp" partName="DeviceCapture.cpp" path="/home/rgap/REPOSITORIES/MobileRobot/workspace/BeachCleanerProject _enr/Capture/DeviceCapture.cpp" title="DeviceCapture.cpp" tooltip="BeachCleanerProject _enr/Capture/DeviceCapture.cpp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/BeachCleanerProject _enr/Capture/DeviceCapture.cpp"/>
+<editorState selectionHorizontalPixel="0" selectionLength="11" selectionOffset="1484" selectionTopPixel="1088"/>
 </editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="DepthSensing.cpp" partName="DepthSensing.cpp" path="/home/rgap/REPOSITORIES/MobileRobot/workspace/BeachCleanerProject/3D_Processing/DepthSensing.cpp" title="DepthSensing.cpp" tooltip="BeachCleanerProject/3D_Processing/DepthSensing.cpp" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/BeachCleanerProject/3D_Processing/DepthSensing.cpp"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="255" selectionTopPixel="4"/>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="RobotVision.cpp" partName="RobotVision.cpp" path="/home/rgap/REPOSITORIES/MobileRobot/workspace/BeachCleanerProject _enr/RobotVision.cpp" title="RobotVision.cpp" tooltip="BeachCleanerProject _enr/RobotVision.cpp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/BeachCleanerProject _enr/RobotVision.cpp"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1598" selectionTopPixel="799"/>
 </editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="SAC_MethodXYZ.cpp" partName="SAC_MethodXYZ.cpp" path="/home/rgap/REPOSITORIES/MobileRobot/workspace/BeachCleanerProject/3D_Processing/SACMethod/SAC_MethodXYZ.cpp" title="SAC_MethodXYZ.cpp" tooltip="BeachCleanerProject/3D_Processing/SACMethod/SAC_MethodXYZ.cpp" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/BeachCleanerProject/3D_Processing/SACMethod/SAC_MethodXYZ.cpp"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1202" selectionTopPixel="400"/>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="ModelParameters.h" partName="ModelParameters.h" path="/home/rgap/REPOSITORIES/MobileRobot/workspace/BeachCleanerProject _enr/ModelParameters.h" title="ModelParameters.h" tooltip="BeachCleanerProject _enr/ModelParameters.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/BeachCleanerProject _enr/ModelParameters.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="417" selectionOffset="1362" selectionTopPixel="1156"/>
 </editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="DepthSensing.h" partName="DepthSensing.h" path="/home/rgap/REPOSITORIES/MobileRobot/workspace/BeachCleanerProject/3D_Processing/DepthSensing.h" title="DepthSensing.h" tooltip="BeachCleanerProject/3D_Processing/DepthSensing.h" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/BeachCleanerProject/3D_Processing/DepthSensing.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="369" selectionTopPixel="256"/>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="RobotVision.h" partName="RobotVision.h" path="/home/rgap/REPOSITORIES/MobileRobot/workspace/BeachCleanerProject _enr/RobotVision.h" title="RobotVision.h" tooltip="BeachCleanerProject _enr/RobotVision.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/BeachCleanerProject _enr/RobotVision.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1690" selectionTopPixel="1099"/>
 </editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="PointCloud.h" partName="PointCloud.h" path="/home/rgap/REPOSITORIES/MobileRobot/workspace/BeachCleanerProject/3D_Processing/PointCloud.h" title="PointCloud.h" tooltip="BeachCleanerProject/3D_Processing/PointCloud.h" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/BeachCleanerProject/3D_Processing/PointCloud.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="817" selectionTopPixel="508"/>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="RobotFSM.h" partName="RobotFSM.h" path="/home/rgap/REPOSITORIES/MobileRobot/workspace/BeachCleanerProject _enr/RobotPlanning/RobotFSM.h" title="RobotFSM.h" tooltip="BeachCleanerProject _enr/RobotPlanning/RobotFSM.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/BeachCleanerProject _enr/RobotPlanning/RobotFSM.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="517" selectionTopPixel="106"/>
 </editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="PointCloudGrayscale.h" partName="PointCloudGrayscale.h" path="/home/rgap/REPOSITORIES/MobileRobot/workspace/BeachCleanerProject/3D_Processing/PointCloudGrayscale.h" title="PointCloudGrayscale.h" tooltip="BeachCleanerProject/3D_Processing/PointCloudGrayscale.h" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/BeachCleanerProject/3D_Processing/PointCloudGrayscale.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="295" selectionTopPixel="150"/>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="ActionControl.h" partName="ActionControl.h" path="/home/rgap/REPOSITORIES/MobileRobot/workspace/BeachCleanerProject _enr/RobotPlanning/ActionControl.h" title="ActionControl.h" tooltip="BeachCleanerProject _enr/RobotPlanning/ActionControl.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/BeachCleanerProject _enr/RobotPlanning/ActionControl.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="189" selectionTopPixel="99"/>
 </editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="PointCloudGrayscale.cpp" partName="PointCloudGrayscale.cpp" path="/home/rgap/REPOSITORIES/MobileRobot/workspace/BeachCleanerProject/3D_Processing/PointCloudGrayscale.cpp" title="PointCloudGrayscale.cpp" tooltip="BeachCleanerProject/3D_Processing/PointCloudGrayscale.cpp" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/BeachCleanerProject/3D_Processing/PointCloudGrayscale.cpp"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2017" selectionTopPixel="991"/>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="CanRecognition.cpp" partName="CanRecognition.cpp" path="/home/rgap/REPOSITORIES/MobileRobot/workspace/BeachCleanerProject _enr/2D_Processing/CanRecognition.cpp" title="CanRecognition.cpp" tooltip="BeachCleanerProject _enr/2D_Processing/CanRecognition.cpp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/BeachCleanerProject _enr/2D_Processing/CanRecognition.cpp"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="668" selectionTopPixel="442"/>
 </editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="PointCloud.cpp" partName="PointCloud.cpp" path="/home/rgap/REPOSITORIES/MobileRobot/workspace/BeachCleanerProject/3D_Processing/PointCloud.cpp" title="PointCloud.cpp" tooltip="BeachCleanerProject/3D_Processing/PointCloud.cpp" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/BeachCleanerProject/3D_Processing/PointCloud.cpp"/>
-<editorState selectionHorizontalPixel="0" selectionLength="10" selectionOffset="207" selectionTopPixel="86"/>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="types_c.h" partName="types_c.h" title="types_c.h" tooltip="/usr/local/include/opencv2/imgproc/types_c.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" path="/usr/local/include/opencv2/imgproc/types_c.h" project="BeachCleanerProject _enr"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="10536" selectionTopPixel="6766"/>
 </editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="ModelParameters.h" partName="ModelParameters.h" path="/home/rgap/REPOSITORIES/MobileRobot/workspace/BeachCleanerProject/ModelParameters.h" title="ModelParameters.h" tooltip="BeachCleanerProject/ModelParameters.h" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/BeachCleanerProject/ModelParameters.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="CanRecognition.h" partName="CanRecognition.h" path="/home/rgap/REPOSITORIES/MobileRobot/workspace/BeachCleanerProject _enr/2D_Processing/CanRecognition.h" title="CanRecognition.h" tooltip="BeachCleanerProject _enr/2D_Processing/CanRecognition.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/BeachCleanerProject _enr/2D_Processing/CanRecognition.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="389" selectionTopPixel="249"/>
 </editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="RobotFSM.cpp" partName="RobotFSM.cpp" path="/home/rgap/REPOSITORIES/MobileRobot/workspace/BeachCleanerProject/RobotPlanning/RobotFSM.cpp" title="RobotFSM.cpp" tooltip="BeachCleanerProject/RobotPlanning/RobotFSM.cpp" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/BeachCleanerProject/RobotPlanning/RobotFSM.cpp"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1375" selectionTopPixel="0"/>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="SerialDevice.cpp" partName="SerialDevice.cpp" path="/home/rgap/REPOSITORIES/MobileRobot/workspace/BeachCleanerProject _enr/DataTransfer/SerialDevice.cpp" title="SerialDevice.cpp" tooltip="BeachCleanerProject _enr/DataTransfer/SerialDevice.cpp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/BeachCleanerProject _enr/DataTransfer/SerialDevice.cpp"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="152" selectionTopPixel="5"/>
 </editor>
-<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="SerialDevice.cpp" partName="SerialDevice.cpp" path="/home/rgap/REPOSITORIES/MobileRobot/workspace/BeachCleanerProject/DataTransfer/SerialDevice.cpp" title="SerialDevice.cpp" tooltip="BeachCleanerProject/DataTransfer/SerialDevice.cpp" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/BeachCleanerProject/DataTransfer/SerialDevice.cpp"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="462" selectionTopPixel="60"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="SerialDevice.h" partName="SerialDevice.h" path="/home/rgap/REPOSITORIES/MobileRobot/workspace/BeachCleanerProject/DataTransfer/SerialDevice.h" title="SerialDevice.h" tooltip="BeachCleanerProject/DataTransfer/SerialDevice.h" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/BeachCleanerProject/DataTransfer/SerialDevice.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="12" selectionOffset="294" selectionTopPixel="26"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="highgui_c.h" partName="highgui_c.h" title="highgui_c.h" tooltip="/usr/local/include/opencv2/highgui/highgui_c.h" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" path="/usr/local/include/opencv2/highgui/highgui_c.h" project="BeachCleanerProject"/>
-<editorState selectionHorizontalPixel="0" selectionLength="13" selectionOffset="12082" selectionTopPixel="4998"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="main.cpp" partName="main.cpp" path="/home/rgap/REPOSITORIES/MobileRobot/workspace/MeshTesting/main.cpp" title="main.cpp" tooltip="MeshTesting/main.cpp" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/MeshTesting/main.cpp"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3477" selectionTopPixel="578"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="main.cpp" partName="main.cpp" path="/home/rgap/REPOSITORIES/MobileRobot/workspace/KinectDevice/main.cpp" title="main.cpp" tooltip="KinectDevice/main.cpp" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/KinectDevice/main.cpp"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1041" selectionTopPixel="443"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="RobotFSM.h" partName="RobotFSM.h" path="/home/rgap/REPOSITORIES/MobileRobot/workspace/BeachCleanerProject/RobotPlanning/RobotFSM.h" title="RobotFSM.h" tooltip="BeachCleanerProject/RobotPlanning/RobotFSM.h" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/BeachCleanerProject/RobotPlanning/RobotFSM.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="340" selectionTopPixel="215"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="VoxelDownsampling.h" partName="VoxelDownsampling.h" path="/home/rgap/REPOSITORIES/MobileRobot/workspace/BeachCleanerProject/3D_Processing/CloudDownsampling/VoxelDownsampling.h" title="VoxelDownsampling.h" tooltip="BeachCleanerProject/3D_Processing/CloudDownsampling/VoxelDownsampling.h" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/BeachCleanerProject/3D_Processing/CloudDownsampling/VoxelDownsampling.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="55"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="RobotVision.h" partName="RobotVision.h" path="/home/rgap/REPOSITORIES/MobileRobot/workspace/BeachCleanerProject/RobotVision.h" title="RobotVision.h" tooltip="BeachCleanerProject/RobotVision.h" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/BeachCleanerProject/RobotVision.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="980" selectionTopPixel="191"/>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="SerialStreamBuf.h" partName="SerialStreamBuf.h" title="SerialStreamBuf.h" tooltip="/usr/local/include/SerialStreamBuf.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" path="/usr/local/include/SerialStreamBuf.h" project="BeachCleanerProject _enr"/>
+<editorState selectionHorizontalPixel="0" selectionLength="11" selectionOffset="2859" selectionTopPixel="963"/>
 </editor>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="SerialStream.h" partName="SerialStream.h" title="SerialStream.h" tooltip="/usr/local/include/SerialStream.h" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" path="/usr/local/include/SerialStream.h" project="BeachCleanerProject"/>
-<editorState selectionHorizontalPixel="0" selectionLength="9" selectionOffset="274" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="globals.h" partName="globals.h" path="/home/rgap/REPOSITORIES/MobileRobot/workspace/BeachCleanerProject/globals.h" title="globals.h" tooltip="BeachCleanerProject/globals.h" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/BeachCleanerProject/globals.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+<input factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" path="/usr/local/include/SerialStream.h" project="BeachCleanerProject _enr"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="6584" selectionTopPixel="2734"/>
 </editor>
 </editors>
 <views>
@@ -159,10 +119,22 @@
 <view id="org.eclipse.debug.ui.MemoryView" partName="Memory">
 <viewState/>
 </view>
+<view id="org.eclipse.search.ui.views.SearchView" partName="Search">
+<viewState isPinned="false">
+<view IMemento.internal.id="" org.eclipse.search.lastActivation="0"/>
+<view IMemento.internal.id="org.eclipse.cdt.ui.pdomSearchViewPage" definitionColumnWidth="150" locationColumnWidth="300" matchColumnWidth="300" org.eclipse.search.lastActivation="1" org.eclipse.search.resultpage.layout="2" showEnclosingDefinitions="true"/>
+</viewState>
+</view>
 <view id="org.eclipse.debug.ui.DebugView" partName="Debug">
 <viewState/>
 </view>
 <view id="org.eclipse.cdt.debug.ui.executablesView" partName="Executables"/>
+<view id="org.eclipse.debug.ui.BreakpointView" partName="Breakpoints">
+<viewState/>
+</view>
+<view id="org.eclipse.debug.ui.VariableView" partName="Variables">
+<viewState/>
+</view>
 <view id="org.eclipse.ui.views.TaskList" partName="Tasks">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.completionField" categoryGroup="none" markerContentGenerator="org.eclipse.ui.ide.tasksGenerator" partName="Tasks">
 <columnWidths org.eclipse.ui.ide.completionField="40" org.eclipse.ui.ide.descriptionField="353" org.eclipse.ui.ide.locationField="73" org.eclipse.ui.ide.markerType="108" org.eclipse.ui.ide.pathField="143" org.eclipse.ui.ide.priorityField="19" org.eclipse.ui.ide.resourceField="108"/>
@@ -175,26 +147,21 @@
 <visible IMemento.internal.id="org.eclipse.ui.ide.markerType"/>
 </viewState>
 </view>
-<view id="org.eclipse.debug.ui.VariableView" partName="Variables">
-<viewState/>
-</view>
-<view id="org.eclipse.debug.ui.BreakpointView" partName="Breakpoints">
-<viewState/>
-</view>
 <view id="org.eclipse.ui.views.ContentOutline" partName="Outline">
 <viewState/>
 </view>
 <view id="org.eclipse.ui.navigator.ProjectExplorer" partName="Project Explorer">
 <viewState CommonNavigator.LINKING_ENABLED="0" CommonNavigator.LINKING_ENABLED.delayed="0" org.eclipse.cdt.ui.cview.groupincludes="false" org.eclipse.cdt.ui.cview.groupmacros="false" org.eclipse.cdt.ui.editor.CUChildren="true" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="0"/>
 </view>
-<view id="org.eclipse.ui.views.PropertySheet" partName="Properties"/>
+<view id="org.eclipse.ui.views.PropertySheet" partName="Properties">
+<viewState/>
+</view>
 <view id="org.eclipse.debug.ui.RegisterView" partName="Registers">
 <viewState/>
 </view>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
-<expanded>
-<category IMemento.internal.id="Errors (19 items)"/>
+<expanded>&#x0A;<category IMemento.internal.id="Warnings (5 items)"/>
 <category IMemento.internal.id="Errors"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.locationField="0" org.eclipse.ui.ide.markerType="0" org.eclipse.ui.ide.pathField="0" org.eclipse.ui.ide.resourceField="0" org.eclipse.ui.ide.severityAndDescriptionField="0"/>
@@ -204,6 +171,9 @@
 <visible IMemento.internal.id="org.eclipse.ui.ide.locationField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.markerType"/>
 </viewState>
+</view>
+<view id="org.eclipse.cdt.ui.callHierarchy" partName="Call Hierarchy">
+<viewState showFilesInLabels="false" variableFilter="false"/>
 </view>
 <view id="org.eclipse.ui.console.ConsoleView" partName="Console">
 <viewState/>
@@ -269,6 +239,8 @@
 <view id="org.eclipse.ui.views.PropertySheet"/>
 <view id="org.eclipse.ui.views.ProgressView"/>
 <view id="org.eclipse.debug.ui.DebugView"/>
+<view id="org.eclipse.cdt.ui.callHierarchy"/>
+<view id="org.eclipse.search.ui.views.SearchView"/>
 <fastViewBars/>
 <layout>
 <mainWindow>
@@ -283,6 +255,28 @@
 </presentation>
 </folder>
 </info>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@44ad49" ratio="0.5695581" ratioLeft="348" ratioRight="263" relationship="4" relative="topLeft">
+<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
+<page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
+<page content="org.eclipse.ui.views.TaskList" label="Tasks"/>
+<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
+<page content="org.eclipse.ui.views.PropertySheet" label="Properties"/>
+<page content="org.eclipse.ui.views.ProgressView" label="Progress"/>
+<page content="org.eclipse.debug.ui.DebugView" label="Debug"/>
+<page content="org.eclipse.cdt.ui.callHierarchy" label="Call Hierarchy"/>
+<page content="org.eclipse.search.ui.views.SearchView" label="Search"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+<part id="3"/>
+<part id="4"/>
+<part id="5"/>
+<part id="6"/>
+<part id="7"/>
+</presentation>
+</folder>
+</info>
 <info folder="true" part="org.eclipse.ui.internal.ViewStack@fb1f6a" ratio="0.7495049" ratioLeft="757" ratioRight="253" relationship="2" relative="topLeft">
 <folder appearance="2" expanded="2">
 <page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
@@ -291,25 +285,7 @@
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
-<info part="org.eclipse.ui.editorss" ratio="0.11365314" ratioLeft="154" ratioRight="1201" relationship="2" relative="topLeft"/>
-<info folder="true" part="bottom" ratio="0.7058824" ratioLeft="408" ratioRight="170" relationship="4" relative="org.eclipse.ui.editorss">
-<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
-<page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
-<page content="org.eclipse.ui.views.TaskList" label="Tasks"/>
-<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
-<page content="org.eclipse.ui.views.PropertySheet" label="Properties"/>
-<page content="org.eclipse.ui.views.ProgressView" label="Progress"/>
-<page content="org.eclipse.debug.ui.DebugView" label="Debug"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
-<part id="1"/>
-<part id="2"/>
-<part id="3"/>
-<part id="4"/>
-<part id="5"/>
-</presentation>
-</folder>
-</info>
+<info part="org.eclipse.ui.editorss" ratio="0.17933579" ratioLeft="243" ratioRight="1112" relationship="2" relative="topLeft"/>
 <info folder="true" part="topRight" ratio="0.74934036" ratioLeft="568" ratioRight="190" relationship="2" relative="org.eclipse.ui.editorss">
 <folder appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ContentOutline" label="LabelNotFound"/>
@@ -364,12 +340,13 @@
 <view id="org.eclipse.ui.views.ProblemView"/>
 <view id="org.eclipse.cdt.debug.ui.executablesView"/>
 <view id="org.eclipse.debug.ui.MemoryView"/>
+<view id="org.eclipse.ui.views.ProgressView"/>
 <view id="org.eclipse.debug.ui.DebugView"/>
+<view id="org.eclipse.ui.views.ContentOutline"/>
 <view id="org.eclipse.debug.ui.VariableView"/>
 <view id="org.eclipse.debug.ui.BreakpointView"/>
 <view id="org.eclipse.debug.ui.RegisterView"/>
 <view id="org.eclipse.debug.ui.ModuleView"/>
-<view id="org.eclipse.ui.views.ContentOutline"/>
 <fastViewBars/>
 <layout>&#x0A;<mainWindow>&#x0A;<info folder="true" part="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder activePageID="org.eclipse.debug.ui.DebugView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.debug.ui.DebugView" label="Debug"/>
 <page content="org.eclipse.ui.views.ResourceNavigator" label="LabelNotFound"/>
@@ -382,11 +359,12 @@
 <page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.debug.internal.ui.ConsoleFolderView" ratio="0.7495908" ratioLeft="458" ratioRight="153" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
+<info folder="true" part="org.eclipse.debug.internal.ui.ConsoleFolderView" ratio="0.700491" ratioLeft="428" ratioRight="183" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
 <page content="org.eclipse.ui.views.TaskList" label="Tasks"/>
 <page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
 <page content="org.eclipse.cdt.debug.ui.executablesView" label="Executables"/>
 <page content="org.eclipse.debug.ui.MemoryView" label="Memory"/>
+<page content="org.eclipse.ui.views.ProgressView" label="Progress"/>
 <page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.PropertySheet" label="LabelNotFound"/>
 <page content="org.eclipse.cdt.debug.ui.memory.memorybrowser.MemoryBrowser" label="LabelNotFound"/>
@@ -395,28 +373,32 @@
 <part id="2"/>
 <part id="3"/>
 <part id="4"/>
+<part id="5"/>
 </presentation>
 </folder>
 </info>
-<info part="org.eclipse.ui.editorss" ratio="0.44978166" ratioLeft="206" ratioRight="252" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView"/>
-<info folder="true" part="org.eclipse.debug.internal.ui.OutlineFolderView" ratio="0.74950296" ratioLeft="754" ratioRight="252" relationship="2" relative="org.eclipse.ui.editorss">&#x0A;<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@152f17" ratio="0.23076923" ratioLeft="105" ratioRight="350" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder activePageID="org.eclipse.debug.ui.VariableView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.debug.ui.VariableView" label="Variables"/>
+<page content="org.eclipse.debug.ui.BreakpointView" label="Breakpoints"/>
+<page content="org.eclipse.debug.ui.RegisterView" label="Registers"/>
+<page content="org.eclipse.debug.ui.ModuleView" label="Modules"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+<part id="3"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.debug.internal.ui.OutlineFolderView" ratio="0.74950296" ratioLeft="754" ratioRight="252" relationship="2" relative="org.eclipse.ui.internal.ViewStack@152f17">&#x0A;<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
 <page content="org.eclipse.cdt.dsf.gdb.ui.tracecontrol.view" label="LabelNotFound"/>
 <page content="org.eclipse.cdt.dsf.debug.ui.disassembly.view" label="LabelNotFound"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
 </presentation>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.debug.internal.ui.ToolsFolderView" ratio="0.5" ratioLeft="503" ratioRight="503" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder activePageID="org.eclipse.debug.ui.VariableView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.debug.ui.VariableView" label="Variables"/>
-<page content="org.eclipse.debug.ui.BreakpointView" label="Breakpoints"/>
-<page content="org.eclipse.debug.ui.RegisterView" label="Registers"/>
-<page content="org.eclipse.debug.ui.ModuleView" label="Modules"/>
-<page content="org.eclipse.debug.ui.ExpressionView" label="LabelNotFound"/>
+<info part="org.eclipse.ui.editorss" ratio="0.24852072" ratioLeft="42" ratioRight="127" relationship="4" relative="org.eclipse.ui.internal.ViewStack@152f17"/>
+<info folder="true" part="org.eclipse.debug.internal.ui.ToolsFolderView" ratio="0.5" ratioLeft="503" ratioRight="503" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.debug.ui.ExpressionView" label="LabelNotFound"/>
 <page content="org.eclipse.cdt.debug.ui.SignalsView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
-<part id="1"/>
-<part id="2"/>
-<part id="3"/>
-</presentation>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
 </mainWindow>
@@ -426,163 +408,168 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/BeachCleanerProject/main.cpp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/BeachCleanerProject/RobotPlanning/RobotFSM.cpp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/BeachCleanerProject/DataTransfer/SerialDevice.cpp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/BeachCleanerProject/DataTransfer/SerialDevice.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/BeachCleanerProject/RobotPlanning/RobotFSM.h"/>
-<editor factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/usr/local/include/SerialStream.h" project="BeachCleanerProject"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/BeachCleanerProject/globals.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/BeachCleanerProject _enr/main.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/BeachCleanerProject _enr/RobotPlanning/RobotFSM.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/BeachCleanerProject _enr/RobotVision.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/BeachCleanerProject _enr/2D_Processing/CanRecognition.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/BeachCleanerProject _enr/2D_Processing/CanRecognition.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/BeachCleanerProject _enr/RobotPlanning/ActionControl.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/BeachCleanerProject _enr/RobotPlanning/RobotFSM.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/BeachCleanerProject _enr/RobotPlanning/ActionControl.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/BeachCleanerProject _enr/DataTransfer/SerialDevice.cpp"/>
+<editor factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/usr/local/include/SerialStreamBuf.h" project="BeachCleanerProject _enr"/>
+<editor factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/usr/local/include/SerialStream.h" project="BeachCleanerProject _enr"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/BeachCleanerProject _enr/ModelParameters.h"/>
 </editors>
-<item historyLabel="SerialDevice.cpp" index="2">
-<position info="not_deleted" x="216" y="11"/>
+<item historyLabel="RobotFSM.cpp" index="1">
+<position info="not_deleted" x="780" y="0"/>
+</item>
+<item historyLabel="RobotVision.cpp" index="2">
+<position info="not_deleted" x="1598" y="0"/>
+</item>
+<item historyLabel="CanRecognition.cpp" index="3">
+<position info="not_deleted" x="337" y="0"/>
+</item>
+<item historyLabel="CanRecognition.h" index="4">
+<position info="not_deleted" x="389" y="0"/>
+</item>
+<item historyLabel="CanRecognition.cpp" index="3">
+<position info="not_deleted" x="668" y="0"/>
 </item>
 <item historyLabel="RobotFSM.cpp" index="1">
-<position info="not_deleted" x="138" y="0"/>
+<position info="not_deleted" x="780" y="0"/>
 </item>
-<item historyLabel="SerialDevice.cpp" index="2">
-<position info="not_deleted" x="216" y="11"/>
-</item>
-<item historyLabel="RobotFSM.cpp" index="1">
-<position info="not_deleted" x="192" y="0"/>
-</item>
-<item historyLabel="RobotFSM.h" index="4">
-<position info="not_deleted" x="692" y="0"/>
+<item historyLabel="main.cpp" index="0">
+<position info="not_deleted" x="2800" y="131"/>
 </item>
 <item historyLabel="RobotFSM.cpp" index="1">
-<position info="not_deleted" x="309" y="0"/>
+<position info="not_deleted" x="592" y="0"/>
 </item>
-<item historyLabel="RobotFSM.h" index="4">
-<position info="not_deleted" x="648" y="0"/>
+<item historyLabel="ActionControl.cpp" index="5">
+<position/>
+</item>
+<item historyLabel="main.cpp" index="0">
+<position info="not_deleted" x="3017" y="0"/>
 </item>
 <item historyLabel="RobotFSM.cpp" index="1">
-<position info="not_deleted" x="181" y="13"/>
+<position info="not_deleted" x="1310" y="0"/>
+</item>
+<item historyLabel="RobotFSM.h" index="6">
+<position info="not_deleted" x="643" y="19"/>
+</item>
+<item historyLabel="RobotFSM.h" index="6">
+<position info="not_deleted" x="685" y="0"/>
+</item>
+<item historyLabel="RobotFSM.h" index="6">
+<position info="not_deleted" x="517" y="0"/>
 </item>
 <item historyLabel="RobotFSM.cpp" index="1">
-<position info="not_deleted" x="279" y="0"/>
+<position/>
 </item>
-<item historyLabel="SerialDevice.cpp" index="2">
-<position info="not_deleted" x="211" y="0"/>
+<item historyLabel="main.cpp" index="0">
+<position info="not_deleted" x="2338" y="0"/>
 </item>
-<item historyLabel="SerialDevice.h" index="3">
-<position info="not_deleted" x="322" y="0"/>
+<item historyLabel="RobotFSM.h" index="6">
+<position info="not_deleted" x="716" y="0"/>
 </item>
-<item historyLabel="SerialDevice.cpp" index="2">
-<position info="not_deleted" x="206" y="9"/>
+<item historyLabel="RobotFSM.cpp" index="1">
+<position info="not_deleted" x="478" y="0"/>
 </item>
-<item historyLabel="SerialDevice.cpp" index="2">
-<position info="not_deleted" x="252" y="0"/>
+<item historyLabel="RobotFSM.h" index="6">
+<position info="not_deleted" x="517" y="0"/>
 </item>
-<item historyLabel="SerialDevice.cpp" index="2">
-<position info="not_deleted" x="207" y="0"/>
+<item historyLabel="main.cpp" index="0">
+<position info="not_deleted" x="3097" y="0"/>
 </item>
-<item historyLabel="SerialDevice.h" index="3">
-<position info="not_deleted" x="320" y="0"/>
+<item historyLabel="ActionControl.cpp" index="5">
+<position/>
 </item>
-<item historyLabel="SerialDevice.cpp" index="2">
+<item historyLabel="RobotFSM.cpp" index="1">
+<position info="not_deleted" x="478" y="0"/>
+</item>
+<item historyLabel="ActionControl.cpp" index="5">
 <position info="not_deleted" x="209" y="0"/>
 </item>
-<item historyLabel="SerialDevice.h" index="3">
-<position info="not_deleted" x="347" y="0"/>
+<item historyLabel="ActionControl.h" index="7">
+<position info="not_deleted" x="695" y="0"/>
 </item>
 <item historyLabel="RobotFSM.cpp" index="1">
-<position info="not_deleted" x="1311" y="0"/>
-</item>
-<item historyLabel="RobotFSM.h" index="4">
-<position info="not_deleted" x="362" y="20"/>
-</item>
-<item historyLabel="RobotFSM.h" index="4">
-<position info="not_deleted" x="754" y="0"/>
-</item>
-<item historyLabel="RobotFSM.h" index="4">
-<position info="not_deleted" x="362" y="20"/>
-</item>
-<item historyLabel="RobotFSM.h" index="4">
-<position info="not_deleted" x="340" y="0"/>
-</item>
-<item historyLabel="RobotFSM.h" index="4">
-<position info="not_deleted" x="648" y="0"/>
-</item>
-<item historyLabel="RobotFSM.cpp" index="1">
-<position info="not_deleted" x="1068" y="0"/>
-</item>
-<item historyLabel="SerialDevice.h" index="3">
-<position info="not_deleted" x="283" y="0"/>
-</item>
-<item historyLabel="SerialDevice.cpp" index="2">
-<position info="not_deleted" x="552" y="72"/>
-</item>
-<item historyLabel="SerialDevice.h" index="3">
-<position info="not_deleted" x="283" y="0"/>
-</item>
-<item historyLabel="SerialDevice.cpp" index="2">
-<position info="not_deleted" x="345" y="0"/>
-</item>
-<item historyLabel="SerialStream.h" index="5">
-<position info="not_deleted" x="274" y="9"/>
-</item>
-<item historyLabel="SerialDevice.h" index="3">
-<position info="not_deleted" x="283" y="0"/>
-</item>
-<item historyLabel="SerialDevice.cpp" index="2">
-<position info="not_deleted" x="321" y="0"/>
-</item>
-<item historyLabel="SerialDevice.h" index="3">
-<position info="not_deleted" x="259" y="0"/>
-</item>
-<item historyLabel="SerialDevice.cpp" index="2">
-<position info="not_deleted" x="321" y="0"/>
-</item>
-<item historyLabel="RobotFSM.cpp" index="1">
-<position info="not_deleted" x="1074" y="0"/>
-</item>
-<item historyLabel="RobotFSM.h" index="4">
-<position info="not_deleted" x="340" y="0"/>
-</item>
-<item historyLabel="RobotFSM.cpp" index="1">
-<position info="not_deleted" x="989" y="0"/>
-</item>
-<item historyLabel="SerialDevice.cpp" index="2">
-<position info="not_deleted" x="624" y="0"/>
-</item>
-<item historyLabel="RobotFSM.cpp" index="1">
-<position info="not_deleted" x="768" y="0"/>
-</item>
-<item historyLabel="SerialDevice.cpp" index="2">
-<position info="not_deleted" x="272" y="0"/>
-</item>
-<item historyLabel="RobotFSM.cpp" index="1">
-<position info="not_deleted" x="1087" y="0"/>
-</item>
-<item historyLabel="SerialDevice.cpp" index="2">
-<position info="not_deleted" x="208" y="0"/>
-</item>
-<item historyLabel="SerialDevice.h" index="3">
-<position info="not_deleted" x="294" y="12"/>
-</item>
-<item historyLabel="SerialDevice.cpp" index="2">
-<position info="not_deleted" x="208" y="0"/>
-</item>
-<item historyLabel="RobotFSM.cpp" index="1">
-<position info="not_deleted" x="179" y="0"/>
-</item>
-<item historyLabel="globals.h" index="6">
-<position info="not_deleted" x="0" y="0"/>
+<position info="not_deleted" x="783" y="0"/>
 </item>
 <item historyLabel="main.cpp" index="0">
-<position info="not_deleted" x="5439" y="0"/>
+<position info="not_deleted" x="3119" y="0"/>
+</item>
+<item historyLabel="SerialDevice.cpp" index="8">
+<position/>
+</item>
+<item historyLabel="SerialStreamBuf.h" index="9">
+<position info="not_deleted" x="2859" y="11"/>
 </item>
 <item historyLabel="main.cpp" index="0">
-<position info="not_deleted" x="5432" y="0"/>
+<position info="not_deleted" x="2731" y="0"/>
 </item>
-<item historyLabel="main.cpp" index="0">
-<position info="not_deleted" x="5445" y="0"/>
+<item historyLabel="ActionControl.cpp" index="5">
+<position info="not_deleted" x="572" y="0"/>
+</item>
+<item historyLabel="SerialDevice.cpp" index="8">
+<position info="not_deleted" x="353" y="0"/>
+</item>
+<item historyLabel="SerialStream.h" index="10">
+<position info="not_deleted" x="6584" y="0"/>
+</item>
+<item historyLabel="ActionControl.cpp" index="5">
+<position info="not_deleted" x="572" y="0"/>
+</item>
+<item historyLabel="SerialDevice.cpp" index="8">
+<position info="not_deleted" x="416" y="0"/>
+</item>
+<item historyLabel="SerialStream.h" index="10">
+<position info="not_deleted" x="6584" y="0"/>
+</item>
+<item historyLabel="ActionControl.cpp" index="5">
+<position info="not_deleted" x="572" y="0"/>
+</item>
+<item historyLabel="SerialDevice.cpp" index="8">
+<position info="not_deleted" x="153" y="0"/>
+</item>
+<item historyLabel="ActionControl.cpp" index="5">
+<position info="not_deleted" x="349" y="0"/>
+</item>
+<item historyLabel="SerialDevice.cpp" index="8">
+<position info="not_deleted" x="152" y="0"/>
+</item>
+<item historyLabel="ActionControl.cpp" index="5">
+<position info="not_deleted" x="318" y="0"/>
 </item>
 <item historyLabel="RobotFSM.cpp" index="1">
-<position info="not_deleted" x="1375" y="0"/>
+<position info="not_deleted" x="456" y="86"/>
 </item>
-<item active="true" historyLabel="SerialDevice.cpp" index="2">
-<position info="not_deleted" x="208" y="0"/>
+<item historyLabel="main.cpp" index="0">
+<position info="not_deleted" x="2231" y="0"/>
+</item>
+<item historyLabel="RobotFSM.cpp" index="1">
+<position info="not_deleted" x="689" y="0"/>
+</item>
+<item historyLabel="ActionControl.cpp" index="5">
+<position info="not_deleted" x="392" y="0"/>
+</item>
+<item historyLabel="RobotFSM.cpp" index="1">
+<position info="not_deleted" x="1164" y="0"/>
+</item>
+<item historyLabel="main.cpp" index="0">
+<position info="not_deleted" x="2731" y="0"/>
+</item>
+<item historyLabel="ActionControl.cpp" index="5">
+<position info="not_deleted" x="103" y="0"/>
+</item>
+<item historyLabel="ActionControl.h" index="7">
+<position info="not_deleted" x="189" y="0"/>
+</item>
+<item historyLabel="ModelParameters.h" index="11">
+<position info="not_deleted" x="1362" y="417"/>
+</item>
+<item active="true" historyLabel="main.cpp" index="0">
+<position info="not_deleted" x="2731" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -590,9 +577,6 @@
 <workbenchWindowAdvisor/>
 <actionBarAdvisor/>
 <trimLayout>
-<trimArea IMemento.internal.id="16384">
-<trimItem IMemento.internal.id="topLeft"/>
-</trimArea>
 <trimArea IMemento.internal.id="128">
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
 </trimArea>
@@ -600,55 +584,54 @@
 <trimItem IMemento.internal.id="org.eclise.ui.internal.FastViewBar"/>
 <trimItem IMemento.internal.id="org.eclipse.jface.action.StatusLineManager"/>
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.progress.ProgressRegion"/>
-<trimItem IMemento.internal.id="bottom"/>
 </trimArea>
 </trimLayout>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="globals.h" tooltip="BeachCleanerProject/globals.h">
-<persistable path="/BeachCleanerProject/globals.h"/>
-</file>
 <file factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="SerialStream.h" tooltip="/usr/local/include/SerialStream.h">
-<persistable path="/usr/local/include/SerialStream.h" project="BeachCleanerProject"/>
+<persistable path="/usr/local/include/SerialStream.h" project="BeachCleanerProject _enr"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="RobotVision.h" tooltip="BeachCleanerProject/RobotVision.h">
-<persistable path="/BeachCleanerProject/RobotVision.h"/>
+<file factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="SerialStreamBuf.h" tooltip="/usr/local/include/SerialStreamBuf.h">
+<persistable path="/usr/local/include/SerialStreamBuf.h" project="BeachCleanerProject _enr"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="VoxelDownsampling.h" tooltip="BeachCleanerProject/3D_Processing/CloudDownsampling/VoxelDownsampling.h">
-<persistable path="/BeachCleanerProject/3D_Processing/CloudDownsampling/VoxelDownsampling.h"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="SerialDevice.cpp" tooltip="BeachCleanerProject _enr/DataTransfer/SerialDevice.cpp">
+<persistable path="/BeachCleanerProject _enr/DataTransfer/SerialDevice.cpp"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="RobotFSM.h" tooltip="BeachCleanerProject/RobotPlanning/RobotFSM.h">
-<persistable path="/BeachCleanerProject/RobotPlanning/RobotFSM.h"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="CanRecognition.h" tooltip="BeachCleanerProject _enr/2D_Processing/CanRecognition.h">
+<persistable path="/BeachCleanerProject _enr/2D_Processing/CanRecognition.h"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="PCL_viewer" tooltip="MeshTesting/PCL_viewer">
-<persistable path="/MeshTesting/PCL_viewer"/>
+<file factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="types_c.h" tooltip="/usr/local/include/opencv2/imgproc/types_c.h">
+<persistable path="/usr/local/include/opencv2/imgproc/types_c.h" project="BeachCleanerProject _enr"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="main.cpp" tooltip="temp/main.cpp">
-<persistable path="/temp/main.cpp"/>
+<file factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="core.hpp" tooltip="/usr/local/include/opencv2/core/core.hpp">
+<persistable path="/usr/local/include/opencv2/core/core.hpp" project="BeachCleanerProject _enr"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="main.cpp" tooltip="KinectDevice/main.cpp">
-<persistable path="/KinectDevice/main.cpp"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="CanRecognition.cpp" tooltip="BeachCleanerProject _enr/2D_Processing/CanRecognition.cpp">
+<persistable path="/BeachCleanerProject _enr/2D_Processing/CanRecognition.cpp"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="main.cpp" tooltip="MeshTesting/main.cpp">
-<persistable path="/MeshTesting/main.cpp"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="ActionControl.h" tooltip="BeachCleanerProject _enr/RobotPlanning/ActionControl.h">
+<persistable path="/BeachCleanerProject _enr/RobotPlanning/ActionControl.h"/>
 </file>
-<file factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="highgui_c.h" tooltip="/usr/local/include/opencv2/highgui/highgui_c.h">
-<persistable path="/usr/local/include/opencv2/highgui/highgui_c.h" project="BeachCleanerProject"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="RobotFSM.h" tooltip="BeachCleanerProject _enr/RobotPlanning/RobotFSM.h">
+<persistable path="/BeachCleanerProject _enr/RobotPlanning/RobotFSM.h"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="SerialDevice.h" tooltip="BeachCleanerProject/DataTransfer/SerialDevice.h">
-<persistable path="/BeachCleanerProject/DataTransfer/SerialDevice.h"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="RobotVision.h" tooltip="BeachCleanerProject _enr/RobotVision.h">
+<persistable path="/BeachCleanerProject _enr/RobotVision.h"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="SerialDevice.cpp" tooltip="BeachCleanerProject/DataTransfer/SerialDevice.cpp">
-<persistable path="/BeachCleanerProject/DataTransfer/SerialDevice.cpp"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="ModelParameters.h" tooltip="BeachCleanerProject _enr/ModelParameters.h">
+<persistable path="/BeachCleanerProject _enr/ModelParameters.h"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="RobotFSM.cpp" tooltip="BeachCleanerProject/RobotPlanning/RobotFSM.cpp">
-<persistable path="/BeachCleanerProject/RobotPlanning/RobotFSM.cpp"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="RobotVision.cpp" tooltip="BeachCleanerProject _enr/RobotVision.cpp">
+<persistable path="/BeachCleanerProject _enr/RobotVision.cpp"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="ModelParameters.h" tooltip="BeachCleanerProject/ModelParameters.h">
-<persistable path="/BeachCleanerProject/ModelParameters.h"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="DeviceCapture.cpp" tooltip="BeachCleanerProject _enr/Capture/DeviceCapture.cpp">
+<persistable path="/BeachCleanerProject _enr/Capture/DeviceCapture.cpp"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="PointCloud.cpp" tooltip="BeachCleanerProject/3D_Processing/PointCloud.cpp">
-<persistable path="/BeachCleanerProject/3D_Processing/PointCloud.cpp"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="ActionControl.cpp" tooltip="BeachCleanerProject _enr/RobotPlanning/ActionControl.cpp">
+<persistable path="/BeachCleanerProject _enr/RobotPlanning/ActionControl.cpp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="RobotFSM.cpp" tooltip="BeachCleanerProject _enr/RobotPlanning/RobotFSM.cpp">
+<persistable path="/BeachCleanerProject _enr/RobotPlanning/RobotFSM.cpp"/>
 </file>
 </mruList>
 </workbench>

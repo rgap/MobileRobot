@@ -1,0 +1,51 @@
+/*
+ * ActionControl.cpp
+ *
+ *  Created on: 02/04/2014
+ *      Author: rgap
+ */
+
+#include "ActionControl.h"
+
+using namespace cv;
+using namespace std;
+
+ActionControl::ActionControl() {
+}
+
+void ActionControl::initialize(std::string devicePath) {
+	timeCount = 0;
+	stopCount = 0;
+
+	dev.setDevice(devicePath);
+	dev.initializeSerialDevice();
+}
+
+int ActionControl::send(char action) {
+	if(stopCount == 0) {
+		if(timeCount < ACTION_TIME){
+			cout << "Action : " << action << endl; 
+			(*dev.serialStream) << action;
+			timeCount++;
+		}
+		else {
+			cout << "Stop : " << action << endl;
+			(*dev.serialStream) << PARAR;
+			timeCount = 0;
+			stopCount++;
+		}
+	}
+	else{
+		if(stopCount < STOP_TIME){
+			stopCount++;
+		}
+		else{
+			stopCount = 0;
+		}
+	}
+}
+
+bool isBusy
+
+ActionControl::~ActionControl() {
+}

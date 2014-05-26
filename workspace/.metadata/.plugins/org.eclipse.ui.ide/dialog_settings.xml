@@ -13,10 +13,10 @@
 		<item value="false" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
 	</section>
 	<section name="CleanDialogSettings">
-		<item value="565" key="DIALOG_WIDTH"/>
-		<item value="126" key="DIALOG_Y_ORIGIN"/>
-		<item value="557" key="DIALOG_X_ORIGIN"/>
-		<item value="387" key="DIALOG_HEIGHT"/>
-		<item value="true" key="TOGGLE_SELECTED"/>
+		<item value="653" key="DIALOG_WIDTH"/>
+		<item value="57" key="DIALOG_Y_ORIGIN"/>
+		<item value="611" key="DIALOG_X_ORIGIN"/>
+		<item value="364" key="DIALOG_HEIGHT"/>
+		<item value="false" key="TOGGLE_SELECTED"/>
 	</section>
 </section>

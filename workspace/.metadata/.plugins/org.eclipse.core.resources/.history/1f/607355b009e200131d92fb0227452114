@@ -1,0 +1,11 @@
+#include <cv.h>
+#include <highgui.h>
+
+using namespace std;
+using namespace cv;
+
+int main() {
+	VideoCapture Cap(CV_CAP_OPENNI);
+
+	return 0;
+}

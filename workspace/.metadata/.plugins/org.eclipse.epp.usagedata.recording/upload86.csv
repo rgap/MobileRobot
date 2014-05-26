@@ -1,0 +1,251 @@
+what,kind,bundleId,bundleVersion,description,time
+started,bundle,org.eclipse.equinox.app,1.3.1.R36x_v20100803,"org.eclipse.equinox.app",1400939414661
+started,bundle,org.eclipse.equinox.common,3.6.0.v20100503,"org.eclipse.equinox.common",1400939414661
+started,bundle,org.eclipse.equinox.ds,1.2.1.R36x_v20100803,"org.eclipse.equinox.ds",1400939414661
+started,bundle,org.eclipse.equinox.event,1.2.0.v20100503,"org.eclipse.equinox.event",1400939414661
+started,bundle,org.eclipse.equinox.p2.core,2.0.3.R36x_v20110111,"org.eclipse.equinox.p2.core",1400939414662
+started,bundle,org.eclipse.equinox.p2.directorywatcher,1.0.203.R36x_v20101220,"org.eclipse.equinox.p2.directorywatcher",1400939414662
+started,bundle,org.eclipse.equinox.p2.engine,2.0.1.R36x_v20110201,"org.eclipse.equinox.p2.engine",1400939414662
+started,bundle,org.eclipse.equinox.p2.metadata,2.0.1.R36x_v20101202,"org.eclipse.equinox.p2.metadata",1400939414662
+started,bundle,org.eclipse.equinox.p2.metadata.repository,1.1.0.v20100513,"org.eclipse.equinox.p2.metadata.repository",1400939414663
+started,bundle,org.eclipse.equinox.p2.operations,2.0.0.v20100510,"org.eclipse.equinox.p2.operations",1400939414663
+started,bundle,org.eclipse.equinox.p2.reconciler.dropins,1.1.2.R36x_v20110114,"org.eclipse.equinox.p2.reconciler.dropins",1400939414663
+started,bundle,org.eclipse.equinox.p2.repository,2.0.2.R36x_v20110111-1500,"org.eclipse.equinox.p2.repository",1400939414663
+started,bundle,org.eclipse.equinox.p2.ui.sdk.scheduler,1.0.0.v20100507-1815,"org.eclipse.equinox.p2.ui.sdk.scheduler",1400939414664
+started,bundle,org.eclipse.equinox.p2.updatechecker,1.1.101.R36x_v20100823,"org.eclipse.equinox.p2.updatechecker",1400939414664
+started,bundle,org.eclipse.equinox.preferences,3.3.0.v20100503,"org.eclipse.equinox.preferences",1400939414664
+started,bundle,org.eclipse.equinox.registry,3.5.0.v20100503,"org.eclipse.equinox.registry",1400939414664
+started,bundle,org.eclipse.equinox.security,1.0.200.v20100503,"org.eclipse.equinox.security",1400939414665
+started,bundle,org.eclipse.equinox.util,1.0.200.v20100503,"org.eclipse.equinox.util",1400939414665
+started,bundle,org.eclipse.help,3.5.0.v20100524,"org.eclipse.help",1400939414677
+started,bundle,org.eclipse.jface,3.6.2.M20110210-1200,"org.eclipse.jface",1400939414678
+started,bundle,org.eclipse.jsch.core,1.1.200.I20100505-1245,"org.eclipse.jsch.core",1400939414678
+started,bundle,org.eclipse.ltk.core.refactoring,3.5.101.r362_v20101117-0800,"org.eclipse.ltk.core.refactoring",1400939414678
+started,bundle,org.eclipse.ltk.ui.refactoring,3.5.0.v20100526-0800,"org.eclipse.ltk.ui.refactoring",1400939414713
+started,bundle,org.eclipse.mylyn.commons.net,3.4.1.v20100625-2100-e3x,"org.eclipse.mylyn.commons.net",1400939414713
+started,bundle,org.eclipse.mylyn.commons.ui,3.4.0.v20100608-0100-e3x,"org.eclipse.mylyn.commons.ui",1400939414714
+started,bundle,org.eclipse.mylyn.monitor.ui,3.4.1.v20110131-0100-e3x,"org.eclipse.mylyn.monitor.ui",1400939414715
+started,bundle,org.eclipse.search,3.6.0.v20100520-0800,"org.eclipse.search",1400939414724
+started,bundle,org.eclipse.team.core,3.5.101.R36x_v20110203-1036,"org.eclipse.team.core",1400939414788
+started,bundle,org.eclipse.team.cvs.core,3.3.301.R36x_v20110119-0815,"org.eclipse.team.cvs.core",1400939414799
+started,bundle,org.eclipse.team.cvs.ui,3.3.302.R36x_v20110203-1036,"org.eclipse.team.cvs.ui",1400939414815
+started,bundle,org.eclipse.team.ui,3.5.102.R36x_v20110203-1036,"org.eclipse.team.ui",1400939414840
+started,bundle,org.eclipse.ui,3.6.2.M20110203-1100,"org.eclipse.ui",1400939414841
+started,bundle,org.eclipse.ui.console,3.5.0.v20100526,"org.eclipse.ui.console",1400939414841
+started,bundle,org.eclipse.ui.editors,3.6.1.r361_v20100825-0800,"org.eclipse.ui.editors",1400939414841
+started,bundle,org.eclipse.ui.forms,3.5.2.r36_v20100702,"org.eclipse.ui.forms",1400939414864
+started,bundle,org.eclipse.ui.ide,3.6.2.M20101201-0800,"org.eclipse.ui.ide",1400939414900
+started,bundle,org.eclipse.ui.navigator,3.5.0.I20100601-0800,"org.eclipse.ui.navigator",1400939414917
+started,bundle,org.eclipse.ui.navigator.resources,3.4.202.M20101124-0800,"org.eclipse.ui.navigator.resources",1400939414918
+started,bundle,org.eclipse.ui.net,1.2.100.I20100505-1245,"org.eclipse.ui.net",1400939414918
+started,bundle,org.eclipse.ui.views,3.5.1.M20110202-0800,"org.eclipse.ui.views",1400939414919
+started,bundle,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"org.eclipse.ui.workbench",1400939414919
+started,bundle,org.eclipse.ui.workbench.texteditor,3.6.1.r361_v20100714-0800,"org.eclipse.ui.workbench.texteditor",1400939414939
+os,sysinfo,,,"linux",1400939414940
+arch,sysinfo,,,"x86",1400939414940
+ws,sysinfo,,,"gtk",1400939414940
+locale,sysinfo,,,"es_PE",1400939414940
+processors,sysinfo,,,"4",1400939414940
+java.runtime.name,sysinfo,,,"OpenJDK Runtime Environment",1400939414940
+java.runtime.version,sysinfo,,,"1.7.0_55-b14",1400939414940
+java.specification.name,sysinfo,,,"Java Platform API Specification",1400939414940
+java.specification.vendor,sysinfo,,,"Oracle Corporation",1400939414940
+java.specification.version,sysinfo,,,"1.7",1400939414940
+java.vendor,sysinfo,,,"Oracle Corporation",1400939414940
+java.version,sysinfo,,,"1.7.0_55",1400939414940
+java.vm.info,sysinfo,,,"mixed mode, sharing",1400939414940
+java.vm.name,sysinfo,,,"OpenJDK Client VM",1400939414940
+java.vm.specification.name,sysinfo,,,"Java Virtual Machine Specification",1400939414940
+java.vm.specification.vendor,sysinfo,,,"Oracle Corporation",1400939414940
+java.vm.specification.version,sysinfo,,,"1.7",1400939414940
+java.vm.vendor,sysinfo,,,"Oracle Corporation",1400939414940
+java.vm.version,sysinfo,,,"24.51-b03",1400939414940
+started,bundle,org.eclipse.mylyn.context.core,3.4.1.v20100909-0100-e3x,"org.eclipse.mylyn.context.core",1400939415152
+started,bundle,org.eclipse.mylyn.context.ui,3.4.2.v20110131-0100-e3x,"org.eclipse.mylyn.context.ui",1400939415163
+started,bundle,org.eclipse.mylyn.tasks.ui,3.4.3.v20110131-0100-e3x,"org.eclipse.mylyn.tasks.ui",1400939415409
+started,bundle,org.eclipse.mylyn.team.ui,3.4.3.v20110131-0100-e3x,"org.eclipse.mylyn.team.ui",1400939415435
+started,bundle,org.eclipse.update.scheduler,3.2.300.v20100512,"org.eclipse.update.scheduler",1400939415444
+started,bundle,org.eclipse.update.configurator,3.3.100.v20100512,"org.eclipse.update.configurator",1400939415558
+started,bundle,org.eclipse.update.core,3.2.402.R36x_v20100629,"org.eclipse.update.core",1400939415612
+started,bundle,org.eclipse.debug.ui,3.6.3.v20101201_r362,"org.eclipse.debug.ui",1400939489457
+started,bundle,org.eclipse.cdt.debug.core,7.0.0.201102110609,"org.eclipse.cdt.debug.core",1400939489982
+started,bundle,org.eclipse.cdt.debug.ui,7.0.0.201102110609,"org.eclipse.cdt.debug.ui",1400939490014
+started,bundle,org.eclipse.cdt.launch,6.1.0.201102110609,"org.eclipse.cdt.launch",1400939490064
+started,bundle,org.eclipse.cdt.managedbuilder.gnu.ui,7.0.0.201102110609,"org.eclipse.cdt.managedbuilder.gnu.ui",1400939491997
+stopped,bundle,name.schedenig.eclipse.grepconsole,3.5.1,"name.schedenig.eclipse.grepconsole",1400939492075
+error,log,,,"Plug-in name.schedenig.eclipse.grepconsole was unable to load class name.schedenig.eclipse.grepconsole.adapters.GrepPageParticipant.",1400939492080
+started,bundle,org.eclipse.cdt.debug.mi.ui,6.1.0.201102110609,"org.eclipse.cdt.debug.mi.ui",1400939493738
+started,bundle,org.eclipse.cdt.dsf,2.1.1.201102110609,"org.eclipse.cdt.dsf",1400939493928
+started,bundle,org.eclipse.cdt.dsf.gdb,3.0.0.201102110609,"org.eclipse.cdt.dsf.gdb",1400939493929
+started,bundle,org.eclipse.cdt.dsf.gdb.ui,2.1.0.201102110609,"org.eclipse.cdt.dsf.gdb.ui",1400939493930
+error,log,,,"Plug-in name.schedenig.eclipse.grepconsole was unable to load class name.schedenig.eclipse.grepconsole.adapters.GrepPageParticipant.",1400939493932
+started,bundle,org.eclipse.cdt.debug.mi.core,7.0.1.201102110609,"org.eclipse.cdt.debug.mi.core",1400939494002
+error,log,,,"Plug-in name.schedenig.eclipse.grepconsole was unable to load class name.schedenig.eclipse.grepconsole.adapters.GrepPageParticipant.",1400939519466
+error,log,,,"Plug-in name.schedenig.eclipse.grepconsole was unable to load class name.schedenig.eclipse.grepconsole.adapters.GrepPageParticipant.",1400939521289
+error,log,,,"Plug-in name.schedenig.eclipse.grepconsole was unable to load class name.schedenig.eclipse.grepconsole.adapters.GrepPageParticipant.",1400939522844
+error,log,,,"Plug-in name.schedenig.eclipse.grepconsole was unable to load class name.schedenig.eclipse.grepconsole.adapters.GrepPageParticipant.",1400939550902
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1400939552135
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1400939556614
+activated,view,org.eclipse.ui.console,3.5.0.v20100526,"org.eclipse.ui.console.ConsoleView",1400939561408
+activated,editor,org.eclipse.cdt.ui,5.2.2.201102110609,"org.eclipse.cdt.ui.editor.CEditor",1400939561969
+opened,editor,org.eclipse.cdt.ui,5.2.2.201102110609,"org.eclipse.cdt.ui.editor.CEditor",1400939563243
+activated,editor,org.eclipse.cdt.ui,5.2.2.201102110609,"org.eclipse.cdt.ui.editor.CEditor",1400939563258
+error,log,,,"Plug-in name.schedenig.eclipse.grepconsole was unable to load class name.schedenig.eclipse.grepconsole.adapters.GrepPageParticipant.",1400939636205
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1400939637011
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1400939640028
+activated,view,org.eclipse.ui.console,3.5.0.v20100526,"org.eclipse.ui.console.ConsoleView",1400939641018
+activated,editor,org.eclipse.cdt.ui,5.2.2.201102110609,"org.eclipse.cdt.ui.editor.CEditor",1400939641549
+error,log,,,"Plug-in name.schedenig.eclipse.grepconsole was unable to load class name.schedenig.eclipse.grepconsole.adapters.GrepPageParticipant.",1400939677403
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1400939678239
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1400939686537
+started,bundle,org.eclipse.compare,3.5.101.R36x_v20100929-0800,"org.eclipse.compare",1400939693149
+activated,view,org.eclipse.ui.console,3.5.0.v20100526,"org.eclipse.ui.console.ConsoleView",1400939699444
+activated,editor,org.eclipse.cdt.ui,5.2.2.201102110609,"org.eclipse.cdt.ui.editor.CEditor",1400939700238
+activated,editor,org.eclipse.cdt.ui,5.2.2.201102110609,"org.eclipse.cdt.ui.editor.CEditor",1400939705487
+activated,editor,org.eclipse.cdt.ui,5.2.2.201102110609,"org.eclipse.cdt.ui.editor.CEditor",1400939713625
+opened,editor,org.eclipse.cdt.ui,5.2.2.201102110609,"org.eclipse.cdt.ui.editor.CEditor",1400939723467
+activated,editor,org.eclipse.cdt.ui,5.2.2.201102110609,"org.eclipse.cdt.ui.editor.CEditor",1400939723480
+error,log,,,"Plug-in name.schedenig.eclipse.grepconsole was unable to load class name.schedenig.eclipse.grepconsole.adapters.GrepPageParticipant.",1400940056147
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1400940056958
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1400940057559
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1400940085383
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1400940129553
+activated,view,org.eclipse.ui.console,3.5.0.v20100526,"org.eclipse.ui.console.ConsoleView",1400940129571
+activated,editor,org.eclipse.cdt.ui,5.2.2.201102110609,"org.eclipse.cdt.ui.editor.CEditor",1400940130269
+activated,editor,org.eclipse.cdt.ui,5.2.2.201102110609,"org.eclipse.cdt.ui.editor.CEditor",1400940151929
+executed,command,org.eclipse.ui.workbench.texteditor,3.6.1.r361_v20100714-0800,"org.eclipse.ui.edit.text.goto.lineEnd",1400940161162
+executed,command,org.eclipse.ui.workbench.texteditor,3.6.1.r361_v20100714-0800,"org.eclipse.ui.edit.text.goto.lineEnd",1400940162163
+executed,command,org.eclipse.ui.workbench.texteditor,3.6.1.r361_v20100714-0800,"org.eclipse.ui.edit.text.goto.lineEnd",1400940163244
+executed,command,org.eclipse.ui.workbench.texteditor,3.6.1.r361_v20100714-0800,"org.eclipse.ui.edit.text.goto.lineEnd",1400940164125
+executed,command,org.eclipse.ui.workbench.texteditor,3.6.1.r361_v20100714-0800,"org.eclipse.ui.edit.text.goto.lineEnd",1400940167835
+executed,command,org.eclipse.ui.workbench.texteditor,3.6.1.r361_v20100714-0800,"org.eclipse.ui.edit.text.goto.lineEnd",1400940184276
+executed,command,org.eclipse.ui.workbench.texteditor,3.6.1.r361_v20100714-0800,"org.eclipse.ui.edit.text.goto.lineEnd",1400940185367
+executed,command,org.eclipse.ui.workbench.texteditor,3.6.1.r361_v20100714-0800,"org.eclipse.ui.edit.text.goto.lineEnd",1400940186131
+executed,command,org.eclipse.ui.workbench.texteditor,3.6.1.r361_v20100714-0800,"org.eclipse.ui.edit.text.goto.lineEnd",1400940186757
+executed,command,org.eclipse.ui.workbench.texteditor,3.6.1.r361_v20100714-0800,"org.eclipse.ui.edit.text.goto.lineEnd",1400940187478
+executed,command,org.eclipse.ui.workbench.texteditor,3.6.1.r361_v20100714-0800,"org.eclipse.ui.edit.text.goto.lineEnd",1400940188858
+executed,command,org.eclipse.ui.workbench.texteditor,3.6.1.r361_v20100714-0800,"org.eclipse.ui.edit.text.select.lineEnd",1400940195886
+executed,command,org.eclipse.ui.workbench.texteditor,3.6.1.r361_v20100714-0800,"org.eclipse.ui.edit.text.goto.lineEnd",1400940197341
+executed,command,org.eclipse.ui.workbench.texteditor,3.6.1.r361_v20100714-0800,"org.eclipse.ui.edit.text.goto.lineEnd",1400940200823
+executed,command,org.eclipse.ui.workbench.texteditor,3.6.1.r361_v20100714-0800,"org.eclipse.ui.edit.text.goto.lineEnd",1400940225438
+executed,command,org.eclipse.ui.workbench.texteditor,3.6.1.r361_v20100714-0800,"org.eclipse.ui.edit.text.goto.lineEnd",1400940258418
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1400940269361
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1400940293387
+executed,command,org.eclipse.ui.workbench.texteditor,3.6.1.r361_v20100714-0800,"org.eclipse.ui.edit.text.goto.lineEnd",1400940311910
+opened,editor,org.eclipse.cdt.ui,5.2.2.201102110609,"org.eclipse.cdt.ui.editor.CEditor",1400940315026
+activated,editor,org.eclipse.cdt.ui,5.2.2.201102110609,"org.eclipse.cdt.ui.editor.CEditor",1400940315044
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1400940316914
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1400940317707
+activated,editor,org.eclipse.cdt.ui,5.2.2.201102110609,"org.eclipse.cdt.ui.editor.CEditor",1400940323777
+activated,editor,org.eclipse.cdt.ui,5.2.2.201102110609,"org.eclipse.cdt.ui.editor.CEditor",1400940325891
+executed,command,org.eclipse.ui.workbench.texteditor,3.6.1.r361_v20100714-0800,"org.eclipse.ui.edit.text.goto.lineEnd",1400940337155
+opened,editor,org.eclipse.cdt.ui,5.2.2.201102110609,"org.eclipse.cdt.ui.editor.CEditor",1400940340659
+activated,editor,org.eclipse.cdt.ui,5.2.2.201102110609,"org.eclipse.cdt.ui.editor.CEditor",1400940340672
+executed,command,org.eclipse.ui,3.6.2.M20110203-1100,"org.eclipse.ui.edit.copy",1400940357420
+executed,command,org.eclipse.ui,3.6.2.M20110203-1100,"org.eclipse.ui.edit.copy",1400940357649
+executed,command,org.eclipse.ui,3.6.2.M20110203-1100,"org.eclipse.ui.edit.findReplace",1400940358282
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1400940358310
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1400940362113
+activated,editor,org.eclipse.cdt.ui,5.2.2.201102110609,"org.eclipse.cdt.ui.editor.CEditor",1400940365072
+opened,view,org.eclipse.ui.ide,3.6.2.M20101201-0800,"org.eclipse.ui.views.ProblemView",1400940367323
+executed,command,org.eclipse.ui.workbench.texteditor,3.6.1.r361_v20100714-0800,"org.eclipse.ui.edit.text.goto.lineEnd",1400940376735
+executed,command,org.eclipse.ui.workbench.texteditor,3.6.1.r361_v20100714-0800,"org.eclipse.ui.edit.text.goto.lineStart",1400940377251
+executed,command,org.eclipse.ui.workbench.texteditor,3.6.1.r361_v20100714-0800,"org.eclipse.ui.edit.text.goto.lineStart",1400940377398
+opened,editor,org.eclipse.cdt.ui,5.2.2.201102110609,"org.eclipse.cdt.ui.editor.CEditor",1400940386525
+activated,editor,org.eclipse.cdt.ui,5.2.2.201102110609,"org.eclipse.cdt.ui.editor.CEditor",1400940386538
+executed,command,org.eclipse.ui.workbench.texteditor,3.6.1.r361_v20100714-0800,"org.eclipse.ui.edit.text.goto.textEnd",1400940387783
+activated,editor,org.eclipse.cdt.ui,5.2.2.201102110609,"org.eclipse.cdt.ui.editor.CEditor",1400940391666
+activated,editor,org.eclipse.cdt.ui,5.2.2.201102110609,"org.eclipse.cdt.ui.editor.CEditor",1400940395665
+activated,editor,org.eclipse.cdt.ui,5.2.2.201102110609,"org.eclipse.cdt.ui.editor.CEditor",1400940399295
+error,log,,,"Plug-in name.schedenig.eclipse.grepconsole was unable to load class name.schedenig.eclipse.grepconsole.adapters.GrepPageParticipant.",1400940412433
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1400940413250
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1400940448414
+activated,view,org.eclipse.ui.console,3.5.0.v20100526,"org.eclipse.ui.console.ConsoleView",1400940448426
+activated,editor,org.eclipse.cdt.ui,5.2.2.201102110609,"org.eclipse.cdt.ui.editor.CEditor",1400940887928
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1400940890823
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1400941106774
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1400941107992
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1400941133947
+activated,view,org.eclipse.ui.console,3.5.0.v20100526,"org.eclipse.ui.console.ConsoleView",1400941135993
+activated,editor,org.eclipse.cdt.ui,5.2.2.201102110609,"org.eclipse.cdt.ui.editor.CEditor",1400941137051
+activated,view,org.eclipse.ui.navigator.resources,3.4.202.M20101124-0800,"org.eclipse.ui.navigator.ProjectExplorer",1400941141225
+error,log,,,"Plug-in name.schedenig.eclipse.grepconsole was unable to load class name.schedenig.eclipse.grepconsole.adapters.GrepPageParticipant.",1400941145159
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1400941145790
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1400941149394
+activated,view,org.eclipse.ui.console,3.5.0.v20100526,"org.eclipse.ui.console.ConsoleView",1400941149400
+activated,editor,org.eclipse.cdt.ui,5.2.2.201102110609,"org.eclipse.cdt.ui.editor.CEditor",1400941150186
+activated,editor,org.eclipse.cdt.ui,5.2.2.201102110609,"org.eclipse.cdt.ui.editor.CEditor",1400941151442
+activated,editor,org.eclipse.cdt.ui,5.2.2.201102110609,"org.eclipse.cdt.ui.editor.CEditor",1400941162139
+activated,editor,org.eclipse.cdt.ui,5.2.2.201102110609,"org.eclipse.cdt.ui.editor.CEditor",1400941174363
+activated,editor,org.eclipse.cdt.ui,5.2.2.201102110609,"org.eclipse.cdt.ui.editor.CEditor",1400941180476
+executed,command,org.eclipse.ui,3.6.2.M20110203-1100,"org.eclipse.ui.file.save",1400941199582
+error,log,,,"Plug-in name.schedenig.eclipse.grepconsole was unable to load class name.schedenig.eclipse.grepconsole.adapters.GrepPageParticipant.",1400941210432
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1400941211244
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1400941212345
+activated,view,org.eclipse.ui.console,3.5.0.v20100526,"org.eclipse.ui.console.ConsoleView",1400941212361
+activated,editor,org.eclipse.cdt.ui,5.2.2.201102110609,"org.eclipse.cdt.ui.editor.CEditor",1400941214056
+executed,command,org.eclipse.ui.workbench.texteditor,3.6.1.r361_v20100714-0800,"org.eclipse.ui.edit.text.goto.lineEnd",1400941227821
+activated,editor,org.eclipse.cdt.ui,5.2.2.201102110609,"org.eclipse.cdt.ui.editor.CEditor",1400941231687
+activated,editor,org.eclipse.cdt.ui,5.2.2.201102110609,"org.eclipse.cdt.ui.editor.CEditor",1400941234053
+activated,editor,org.eclipse.cdt.ui,5.2.2.201102110609,"org.eclipse.cdt.ui.editor.CEditor",1400941240340
+activated,editor,org.eclipse.cdt.ui,5.2.2.201102110609,"org.eclipse.cdt.ui.editor.CEditor",1400941241936
+activated,editor,org.eclipse.cdt.ui,5.2.2.201102110609,"org.eclipse.cdt.ui.editor.CEditor",1400941257697
+activated,editor,org.eclipse.cdt.ui,5.2.2.201102110609,"org.eclipse.cdt.ui.editor.CEditor",1400941261193
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1400941273357
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1400941280932
+error,log,,,"Plug-in name.schedenig.eclipse.grepconsole was unable to load class name.schedenig.eclipse.grepconsole.adapters.GrepPageParticipant.",1400941284957
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1400941285772
+activated,view,org.eclipse.ui.console,3.5.0.v20100526,"org.eclipse.ui.console.ConsoleView",1400941285854
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1400941309059
+activated,editor,org.eclipse.cdt.ui,5.2.2.201102110609,"org.eclipse.cdt.ui.editor.CEditor",1400941309082
+activated,view,org.eclipse.ui.console,3.5.0.v20100526,"org.eclipse.ui.console.ConsoleView",1400941309126
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1400941316159
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1400941375077
+activated,editor,org.eclipse.cdt.ui,5.2.2.201102110609,"org.eclipse.cdt.ui.editor.CEditor",1400941375100
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1400941827901
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1400942026823
+error,log,,,"Plug-in name.schedenig.eclipse.grepconsole was unable to load class name.schedenig.eclipse.grepconsole.adapters.GrepPageParticipant.",1400942282272
+activated,view,org.eclipse.ui.console,3.5.0.v20100526,"org.eclipse.ui.console.ConsoleView",1400942282527
+activated,editor,org.eclipse.cdt.ui,5.2.2.201102110609,"org.eclipse.cdt.ui.editor.CEditor",1400942296616
+opened,view,org.eclipse.search,3.6.0.v20100520-0800,"org.eclipse.search.ui.views.SearchView",1400942297366
+activated,view,org.eclipse.search,3.6.0.v20100520-0800,"org.eclipse.search.ui.views.SearchView",1400942297410
+executed,command,org.eclipse.cdt.ui,5.2.2.201102110609,"org.eclipse.cdt.ui.search.finddecl",1400942297487
+activated,editor,org.eclipse.cdt.ui,5.2.2.201102110609,"org.eclipse.cdt.ui.editor.CEditor",1400942297520
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1400943412575
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1400945212552
+activated,view,org.eclipse.ui.navigator.resources,3.4.202.M20101124-0800,"org.eclipse.ui.navigator.ProjectExplorer",1400945218980
+closed,editor,org.eclipse.cdt.ui,5.2.2.201102110609,"org.eclipse.cdt.ui.editor.CEditor",1400945222306
+started,bundle,org.eclipse.cdt.mylyn.ui,1.1.4.v20110204-0100-e3x,"org.eclipse.cdt.mylyn.ui",1400945222353
+closed,editor,org.eclipse.cdt.ui,5.2.2.201102110609,"org.eclipse.cdt.ui.editor.CEditor",1400945222440
+closed,editor,org.eclipse.cdt.ui,5.2.2.201102110609,"org.eclipse.cdt.ui.editor.CEditor",1400945222459
+closed,editor,org.eclipse.cdt.ui,5.2.2.201102110609,"org.eclipse.cdt.ui.editor.CEditor",1400945222474
+closed,editor,org.eclipse.cdt.ui,5.2.2.201102110609,"org.eclipse.cdt.ui.editor.CEditor",1400945222489
+activated,editor,org.eclipse.cdt.ui,5.2.2.201102110609,"org.eclipse.cdt.ui.editor.CEditor",1400945227843
+activated,view,org.eclipse.ui.navigator.resources,3.4.202.M20101124-0800,"org.eclipse.ui.navigator.ProjectExplorer",1400945227866
+closed,editor,org.eclipse.cdt.ui,5.2.2.201102110609,"org.eclipse.cdt.ui.editor.CEditor",1400945227866
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1400945232424
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1400945244414
+opened,editor,org.eclipse.cdt.ui,5.2.2.201102110609,"org.eclipse.cdt.ui.editor.CEditor",1400945248450
+activated,editor,org.eclipse.cdt.ui,5.2.2.201102110609,"org.eclipse.cdt.ui.editor.CEditor",1400945248475
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1400945253180
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1400945257330
+error,log,,,"Plug-in name.schedenig.eclipse.grepconsole was unable to load class name.schedenig.eclipse.grepconsole.adapters.GrepPageParticipant.",1400945270724
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1400945271482
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1400945273763
+activated,view,org.eclipse.ui.console,3.5.0.v20100526,"org.eclipse.ui.console.ConsoleView",1400945273790
+activated,editor,org.eclipse.cdt.ui,5.2.2.201102110609,"org.eclipse.cdt.ui.editor.CEditor",1400945274648
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1400945280257
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1400945429374
+activated,view,org.eclipse.ui.navigator.resources,3.4.202.M20101124-0800,"org.eclipse.ui.navigator.ProjectExplorer",1400945483167
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1400945500605
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1400945587000
+activated,editor,org.eclipse.cdt.ui,5.2.2.201102110609,"org.eclipse.cdt.ui.editor.CEditor",1400945587828
+activated,view,org.eclipse.ui.navigator.resources,3.4.202.M20101124-0800,"org.eclipse.ui.navigator.ProjectExplorer",1400945589470
+closed,editor,org.eclipse.cdt.ui,5.2.2.201102110609,"org.eclipse.cdt.ui.editor.CEditor",1400945594399
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1400945644979
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1400945646238
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1400945648839
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1400945715643
+opened,editor,org.eclipse.cdt.ui,5.2.2.201102110609,"org.eclipse.cdt.ui.editor.CEditor",1400945734241
+activated,editor,org.eclipse.cdt.ui,5.2.2.201102110609,"org.eclipse.cdt.ui.editor.CEditor",1400945734260
+activated,view,org.eclipse.ui.navigator.resources,3.4.202.M20101124-0800,"org.eclipse.ui.navigator.ProjectExplorer",1400945734275

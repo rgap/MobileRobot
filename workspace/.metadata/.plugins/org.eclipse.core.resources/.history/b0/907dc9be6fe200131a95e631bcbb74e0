@@ -1,0 +1,24 @@
+/*
+ * VoxelDownsampling.cpp
+ *
+ *  Created on: 04/04/2014
+ *      Author: rgap
+ */
+
+#include "VoxelDownsampling.h"
+
+VoxelDownsampling::VoxelDownsampling() {
+}
+
+void VoxelDownsampling::downSample(pcl::PointCloud<pcl::PointXYZ>::Ptr cloud) {
+	std::cout << "3. PointCloud before filtering has: " << cloud->points.size()
+			<< " data points." << std::endl;
+	vg.setInputCloud(cloud);
+	vg.setLeafSize(0.5f, 0.5f, 0.5f);
+	vg.filter(*cloud);
+	std::cout << "4. PointCloud after filtering has: " << cloud->points.size()
+			<< " data points." << std::endl;
+}
+
+VoxelDownsampling::~VoxelDownsampling() {
+}

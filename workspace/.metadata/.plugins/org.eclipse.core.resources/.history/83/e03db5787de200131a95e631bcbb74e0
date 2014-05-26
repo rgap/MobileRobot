@@ -1,0 +1,93 @@
+/*
+ * RobotFSM.cpp
+ *
+ *  Created on: 02/04/2014
+ *      Author: rgap
+ */
+
+#include "RobotFSM.h"
+
+using namespace cv;
+using namespace std;
+
+RobotFSM::RobotFSM() {
+}
+
+void RobotFSM::initializeDevice(std::string devicePath) {
+	control.initialize(devicePath);
+	control.send(INICIAL_PALA);
+}
+
+void RobotFSM::setParameters(ModelParameters* P_) {
+	P = P_;
+}
+
+bool RobotFSM::hasPendantAction() {
+	if (control.isBusy()) {
+		control.send();
+		return true;
+	} else {
+		return false;
+	}
+}
+
+void RobotFSM::moveStraight(Rect *rectNearestCan, int W) {
+	if (rectNearestCan->br().y > (W - P->distanceCollectCan))
+		control.send(AVANZAR);
+	else
+		control.send(RECOGER_LATA);
+}
+
+void RobotFSM::searchCan(Rect *rectNearestCan, int canCenterX, int W) {
+	if (canCenterX >= 0 && canCenterX <= W / 3)
+		control.send(GIRO_IZQ);
+	else if (canCenterX > W / 3 && canCenterX <= 2 * W / 3)
+		moveStraight(rectNearestCan, W);
+	else
+		control.send(GIRO_DER);
+}
+
+void RobotFSM::avoidObstacles(Rect *rectNearestCan, Rect *rectNearestObstacle,
+		int canCenterX, int obstacleCenterX, int W) {
+
+	int centerXTolerance = 150; //px
+
+	if (rectNearestObstacle->br().y >= (W - P->distanceMinObstacle)) {
+		control.send(RETROCEDER);
+	} else if (rectNearestCan->br().y >= rectNearestObstacle->br().y) { // LATA MAS O IGUAL DE CERCA QUE EL OBSTACULO
+		searchCan(rectNearestCan, canCenterX, W);
+	} else { // EVITAR COLISION
+
+		//centerXTolerance
+		if (obstacleCenterX >= (W / 2 - centerXTolerance) && obstacleCenterX
+				<= (W / 2 + centerXTolerance)) { // OBSTACULO CENTRO
+			control.send(RETROCEDER);
+		} else { // OBSTACULO LADO DERECHO
+			if ((rectNearestObstacle->tl().x - W / 2) < centerXTolerance) {
+				control.send(GIRO_IZQ);
+			}
+		}
+	}
+}
+
+void RobotFSM::planWithEnvironment(Rect *rectNearestCan,
+		Rect *rectNearestObstacle, Mat &imgColor) {
+
+	int W = imgColor.cols;//, H = imgColor.rows;
+	int canCenterX = (rectNearestCan->tl().x + rectNearestCan->br().x) / 2;
+	int obstacleCenterX = (rectNearestObstacle->tl().x
+			+ rectNearestObstacle->br().x) / 2;
+
+	if (rectNearestObstacle->br().x == -1 && rectNearestCan->br().x == -1) { // any obstacle
+		moveStraight(rectNearestCan, W);
+	} else if (rectNearestObstacle->br().x == -1 && rectNearestCan->br().x
+			!= -1) { // any obstacle & can detected
+		searchCan(rectNearestCan, canCenterX, W);
+	} else if (rectNearestObstacle->br().x != -1) { // obstacle detected
+		avoidObstacles(rectNearestCan, rectNearestObstacle, canCenterX,
+				obstacleCenterX, W);
+	}
+}
+
+RobotFSM::~RobotFSM() {
+}

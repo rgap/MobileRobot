@@ -1,0 +1,40 @@
+/*
+ * RobotFSM.h
+ *
+ *  Created on: 02/04/2014
+ *      Author: rgap
+ */
+
+#ifndef ROBOTFSM_H_
+#define ROBOTFSM_H_
+
+#include <opencv2/opencv.hpp>
+#include "ActionControl.h"
+#include "ModelParameters.h"
+#include "../globals.h"
+using namespace cv;
+using namespace std;
+
+class RobotFSM {
+private:
+	vector<vector<Point> > contours;
+	vector<Vec4i> hierarchy;
+
+	Rect *nearestObstacle;
+	Mat imgObstaclesBin_temp;
+	
+	ActionControl control;
+	ModelParameters* P;
+public:
+	RobotFSM();
+	void setDevicePath(std::string devicePath);
+	void setParameters(ModelParameters* P_);
+
+	bool hasPendantAction();
+
+	int planWithEnvironment(Point3f *pointNearestCan, Mat &imgObstaclesBin);
+
+	virtual ~RobotFSM();
+};
+
+#endif /* ROBOTFSM_H_ */

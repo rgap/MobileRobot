@@ -1,0 +1,14 @@
+#include <sys/time.h>
+#include <stdio.h>
+#include <unistd.h>
+
+#ifndef TIME_H_
+#define TIME_H_
+
+class Time {
+public:
+	Time();
+	virtual ~Time();
+};
+
+#endif /* TIME_H_ */

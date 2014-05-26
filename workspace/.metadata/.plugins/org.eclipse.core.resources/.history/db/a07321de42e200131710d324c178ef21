@@ -1,0 +1,152 @@
+#include "DepthSensing.h"
+#include <iostream>
+#include "../globals.h"
+
+using namespace cv;
+using namespace std;
+
+DepthSensing::DepthSensing() {
+}
+
+void DepthSensing::initializePointCloud(Size &szFrame) {
+	pointCloud = new PCType(szFrame);
+}
+
+void DepthSensing::visualizePointCloud() {
+	pointCloud->visualizeCloud();
+}
+
+Rect* getRectNearestObstacle(){
+	return rectNearestObstacle;
+}
+
+// OBSTACULOS
+
+void DepthSensing::fillPointCloud(Mat& imgColor, Mat& world, Mat &imgMaxDepth) {
+	//pointCloud->dumbFill();
+	pointCloud->fillCloud(imgColor, world, imgMaxDepth, maxDepthDetected);
+}
+
+void DepthSensing::cloudDownsampling() {
+	voxelDownsampling.downSample(pointCloud->cloud);
+}
+
+void DepthSensing::segmentObstacles(Mat& world, Mat& notObstacleBin,
+		Mat &imgMaxDepth, Mat& imgObstaclesBin, Mat& imgPlane,
+		float maxDistObstacle, float maxHeightFloor, float distThreshold,
+		float epsAngle, int axisVal) {
+
+	sac_method.applyRANSAC(pointCloud->cloud, distThreshold, epsAngle, axisVal); // Plane detection
+
+	int i, j, k = 0;
+	for (i = 0; i < world.rows; ++i) {
+		uchar*imgMaxDepth_pt = imgMaxDepth.ptr<uchar> (i);
+		uchar*notObstacleBin_pt = notObstacleBin.ptr<uchar> (i);
+		uchar*imgObstaclesBin_pt = imgObstaclesBin.ptr<uchar> (i);
+		uchar*imgPlane_pt = imgPlane.ptr<uchar> (i);
+		Vec3f *world_ptr = world.ptr<Vec3f> (i);
+		for (j = 0; j < world.cols; ++j) {
+			if (sac_method.inPlane[k])
+				imgPlane_pt[j] = 255;
+			else
+				imgPlane_pt[j] = 0;
+
+			if (imgMaxDepth_pt[j] && !notObstacleBin_pt[j]
+					&& !sac_method.inPlane[k]) {
+				if (world_ptr[j][2] <= maxDistObstacle && i >= (world.rows
+						- maxHeightFloor)) {
+					imgObstaclesBin_pt[j] = 255;
+				} else {
+					imgObstaclesBin_pt[j] = 0;
+				}
+			}
+			k++;
+		}
+	}
+
+	imgObstaclesBin_temp = imgObstaclesBin.clone();
+	findContours(imgObstaclesBin_temp, contours, hierarchy, CV_RETR_TREE,
+			CV_CHAIN_APPROX_SIMPLE, Point(0, 0));
+
+	vector<Rect> boundRect(contours.size());
+	for (i = 0; i < contours.size(); i++) {
+		boundRect[i] = boundingRect(Mat(contours[i]));
+	}
+
+	// get nearest obstacle
+	rectNearestObstacle = new Rect(-1, -1, -1, -1);
+	for (i = 0; i < contours.size(); i++) {
+		if (boundRect[i].br().y > rectNearestObstacle->br().y) {
+			(*rectNearestObstacle) = boundRect[i];
+		}
+	}
+
+	delete (sac_method.inPlane);
+}
+
+void DepthSensing::depthThresholding(Mat& world, Mat&imgMaxDepth,
+		float maxDepth) {
+	int i, j;
+	maxDepthDetected = -1;
+	for (i = 0; i < world.rows; ++i) {
+		uchar*imgMaxDepth_pt = imgMaxDepth.ptr<uchar> (i);
+		Vec3f *world_ptr = world.ptr<Vec3f> (i);
+		for (j = 0; j < world.cols; ++j) {
+			if (world_ptr[j][2] > maxDepthDetected)
+				maxDepthDetected = world_ptr[j][2];
+			if (world_ptr[j][2] <= maxDepth && world_ptr[j][2] > 0) {
+				imgMaxDepth_pt[j] = 255;
+			} else {
+				imgMaxDepth_pt[j] = 0;
+				world_ptr[j][2] = MAX_DEPTH;
+			}
+		}
+	}
+}
+
+void DepthSensing::colorizeDisparity(const Mat& gray, Mat& rgb, double maxDisp,
+		float S, float V) {
+	if (maxDisp <= 0) {
+		maxDisp = 0;
+		minMaxLoc(gray, 0, &maxDisp);
+	}
+	rgb.create(gray.size(), CV_8UC3);
+	rgb = Scalar::all(0);
+	if (maxDisp < 1)
+		return;
+	int y, x;
+	uchar d, b, g, r;
+	unsigned int H, hi;
+	float f, p, q, t;
+	Point3f res;
+	for (y = 0; y < gray.rows; y++) {
+		for (x = 0; x < gray.cols; x++) {
+			d = gray.at<uchar> (y, x);
+			H = ((uchar) maxDisp - d) * 240 / (uchar) maxDisp;
+			hi = (H / 60) % 6;
+			f = H / 60.f - H / 60;
+			p = V * (1 - S);
+			q = V * (1 - f * S);
+			t = V * (1 - (1 - f) * S);
+			if (hi == 0) //R = V,        G = t,        B = p
+				res = Point3f(p, t, V);
+			if (hi == 1) // R = q,        G = V,        B = p
+				res = Point3f(p, V, q);
+			if (hi == 2) // R = p,        G = V,        B = t
+				res = Point3f(t, V, p);
+			if (hi == 3) // R = p,        G = q,        B = V
+				res = Point3f(V, q, p);
+			if (hi == 4) // R = t,        G = p,        B = V
+				res = Point3f(V, p, t);
+			if (hi == 5) // R = V,        G = p,        B = q
+				res = Point3f(q, p, V);
+			b = (uchar) (std::max(0.f, std::min(res.x, 1.f)) * 255.f);
+			g = (uchar) (std::max(0.f, std::min(res.y, 1.f)) * 255.f);
+			r = (uchar) (std::max(0.f, std::min(res.z, 1.f)) * 255.f);
+			rgb.at<Point3_<uchar> > (y, x) = Point3_<uchar> (b, g, r);
+		}
+	}
+}
+
+DepthSensing::~DepthSensing() {
+}

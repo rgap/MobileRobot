@@ -1,0 +1,15 @@
+#include <cv.h>
+#include <highgui.h>
+
+using namespace std;
+using namespace cv;
+
+int main() {
+	VideoCapture Cap(CV_CAP_OPENNI);
+	if (!Cap.isOpened()) {
+		cout << "wrong";
+	}
+
+	cvWaitKey(0);
+	return 0;
+}

@@ -1,0 +1,17 @@
+/*
+ * Time.cpp
+ *
+ *  Created on: 23/05/2014
+ *      Author: rgap
+ */
+
+#include "Time.h"
+
+Time::Time() {
+	// TODO Auto-generated constructor stub
+
+}
+
+Time::~Time() {
+	// TODO Auto-generated destructor stub
+}

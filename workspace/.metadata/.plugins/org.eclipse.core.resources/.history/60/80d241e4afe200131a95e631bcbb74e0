@@ -1,0 +1,77 @@
+/*
+ * ActionControl.cpp
+ *
+ *  Created on: 02/04/2014
+ *      Author: rgap
+ */
+
+#include "ActionControl.h"
+
+using namespace cv;
+using namespace std;
+
+ActionControl::ActionControl() {
+}
+
+void ActionControl::initialize(std::string devicePath) {
+	timeCount = 0;
+	stopCount = 0;
+	busy = false;
+
+	dev.setDevice(devicePath);
+	dev.initializeSerialDevice();
+
+	name = new string[8];
+	name[0] = "PARAR";
+	name[1] = "AVANZAR";
+	name[2] = "RETROCEDER";
+	name[3] = "GIRO_DER";
+	name[4] = "GIRO_IZQ";
+	name[5] = "INICIAL_PALA";
+	name[6] = "RECOGER_LATA";
+	name[7] = "BUSCAR";
+}
+
+void ActionControl::send(char action) {
+
+	(*dev.serialStream) << action;
+
+	/*
+	int ACTION_TIME = 1;
+	int STOP_TIME = 1;
+
+	if (stopCount == 0) {
+		if (timeCount < ACTION_TIME) {
+			if (!busy) {
+				cout << "Action : " << name[(int)(action - '1')] << endl;
+				cout<<"senal... ";
+				(*dev.serialStream) << action;
+			}
+			busy = true;
+			timeCount++;
+		} else {
+			cout << "Stop : " << name[(int)(PARAR - '1')] << endl;
+			cout<<"senal... ";
+			//(*dev.serialStream) << PARAR;
+
+			timeCount = 0;
+			stopCount++;
+		}
+	} else {
+		if (stopCount < STOP_TIME) {
+			stopCount++;
+		} else {
+			stopCount = 0;
+			busy = false;
+		}
+	}
+	*/
+}
+
+bool ActionControl::isBusy() {
+	return busy;
+}
+
+ActionControl::~ActionControl() {
+	delete name;
+}

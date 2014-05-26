@@ -1,0 +1,138 @@
+/*
+ * CanRecognition.cpp
+ *
+ *  Created on: 06/10/2013
+ *      Author: rgap
+ */
+
+#include "CanRecognition.h"
+#include "../globals.h"
+#include "../OpOthers.h"
+
+using namespace cv;
+
+#define OPT_CLASSIFY 0
+
+CanRecognition::CanRecognition() {
+	pointNearestCan = new Point3f();
+}
+
+Rect *CanRecognition::getRectNearestCan() {
+	return rectNearestCan;
+}
+
+void CanRecognition::shapeSegmentation(Mat& imgSegColor_Can,
+		Mat& imgSegShape_Can, Mat &world, Mat &imgMaxDepth,
+		Mat &imgBGR_cansDetected, int minArea, int maxArea,
+		float minApCuadrado, float maxApCuadrado) {
+
+	can_found = 0;
+
+	imgTemp = imgSegColor_Can.clone();
+	findContours(imgTemp, contours, hierarchy, CV_RETR_TREE,
+			CV_CHAIN_APPROX_SIMPLE, Point(0, 0));
+
+	vector<Rect> boundRect(contours.size());
+	/////////////////////////////////////////////////////////////// MOMENTS
+	unsigned int i;
+	int j, k;
+	vector<Moments> mu(contours.size());
+	for (i = 0; i < contours.size(); i++) {
+		mu[i] = moments(contours[i], false);
+	}
+	// get the mass centers
+	vector<Point2f> mc(contours.size());
+	for (i = 0; i < contours.size(); i++) {
+		mc[i] = Point2f(mu[i].m10 / mu[i].m00, mu[i].m01 / mu[i].m00);
+	}
+
+	///////////////////////////////////////////////////////////////////////
+	// draw contours + hull results
+	for (i = 0; i < contours.size(); i++) {
+		boundRect[i] = boundingRect(Mat(contours[i]));
+	}
+
+	// get nearest can
+	int area;
+	float apCuadrado, z;
+	Point pTL, pLR;
+	float marginBoundingBox_w = 0.9, marginBoundingBox_h = 0.7;
+
+	rectNearestCan = new Rect(-1, -1, -1, -1);
+	for (i = 0; i < contours.size(); i++) {
+		area = contourArea(contours[i]); //area
+		apCuadrado = (boundRect[i].height + boundRect[i].width) * 1.0 / (2.0
+				* max(boundRect[i].height, boundRect[i].width));
+
+		if (area >= minArea && area <= maxArea && apCuadrado >= minApCuadrado
+				&& apCuadrado <= maxApCuadrado) {
+			drawContours(imgBGR_cansDetected, contours, i, Scalar(0, 0, 255),
+					1, 8, vector<Vec4i> (), 0, Point());
+			pTL = boundRect[i].tl() - Point(
+					marginBoundingBox_w * boundRect[i].width,
+					marginBoundingBox_h * boundRect[i].height);
+			pLR = boundRect[i].br() + Point(
+					marginBoundingBox_w * boundRect[i].width,
+					marginBoundingBox_h * boundRect[i].height);
+
+			if (pTL.x < 0)
+				pTL.x = 0;
+			if (pTL.y < 0)
+				pTL.y = 0;
+			if (pLR.x > imgBGR_cansDetected.cols)
+				pLR.x = imgBGR_cansDetected.cols;
+			if (pLR.y > imgBGR_cansDetected.rows)
+				pLR.y = imgBGR_cansDetected.rows;
+
+			rectangle(imgBGR_cansDetected, pTL, pLR, Scalar(0, 255, 0), 2, 8, 0);
+			rectangle(imgSegShape_Can, boundRect[i].tl(), boundRect[i].br(),
+					CV_RGB(255, 255, 255), -1);
+
+			if (boundRect[i].br().y > cmax) {
+				cmax = z;
+				pointNearestCan->x = mc[i].x;
+				pointNearestCan->y = mc[i].y;
+				pointNearestCan->z = z;
+			}
+			////////////////////////////////////////////// MASS CENTER
+			circle(imgBGR_cansDetected, mc[i], 4, Scalar(0, 255, 0), -1, 8, 0);
+			///////////////////////////////////////////////////
+			can_found = 1;
+		}
+	}
+
+	circle(imgBGR_cansDetected,
+			Point((int) pointNearestCan->x, (int) pointNearestCan->y), 20,
+			Scalar(0, 0, 255), -1, 8, 0);
+
+	contours.clear();
+	hierarchy.clear();
+}
+
+void CanRecognition::segmentation_HSV(Mat &imgRGB, Mat &imgThreshold, int minH,
+		int maxH, int minS, int maxS, int minV, int maxV) {
+	cvtColor(imgRGB, imgHSV, CV_BGR2HSV);
+	int i, j;
+	for (i = 0; i < imgRGB.rows; i++) {
+		uchar*imgCONV_pt = imgHSV.ptr<uchar> (i);
+		uchar*imgTemp_pt = imgThreshold.ptr<uchar> (i);
+		for (j = 0; j < imgRGB.cols; j++) {
+			if (imgCONV_pt[3 * j + 0] >= minH && imgCONV_pt[3 * j + 0] <= maxH
+					&& imgCONV_pt[3 * j + 1] >= minS && imgCONV_pt[3 * j + 1]
+					<= maxS && imgCONV_pt[3 * j + 2] >= minV && imgCONV_pt[3
+					* j + 2] <= maxV) {
+				imgTemp_pt[j] = 255;
+				imgTemp_pt[j] = 255;
+				imgTemp_pt[j] = 255;
+			} else {
+				imgTemp_pt[j] = 0;
+				imgTemp_pt[j] = 0;
+				imgTemp_pt[j] = 0;
+			}
+		}
+	}
+}
+
+CanRecognition::~CanRecognition() {
+}
+

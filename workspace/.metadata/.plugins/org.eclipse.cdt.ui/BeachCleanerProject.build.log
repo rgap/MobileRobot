@@ -2,47 +2,4 @@
 **** Build of configuration Debug for project BeachCleanerProject ****
 
 make all 
-Building file: ../main.cpp
-Invoking: GCC C++ Compiler
-g++ -I/usr/local/include -I/usr/include -I/usr/local/include/opencv -I/usr/include/pcl-1.7 -I/usr/include/eigen3 -I/usr/include/vtk-5.8 -I/usr/include/ni -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o"main.o" "../main.cpp"
-In file included from /usr/include/c++/4.8/backward/strstream:51:0,
-                 from /usr/include/vtk-5.8/vtkIOStream.h:112,
-                 from /usr/include/vtk-5.8/vtkSystemIncludes.h:40,
-                 from /usr/include/vtk-5.8/vtkIndent.h:24,
-                 from /usr/include/vtk-5.8/vtkObjectBase.h:43,
-                 from /usr/include/vtk-5.8/vtkSmartPointerBase.h:26,
-                 from /usr/include/vtk-5.8/vtkSmartPointer.h:23,
-                 from /usr/include/pcl-1.7/pcl/visualization/point_cloud_geometry_handlers.h:48,
-                 from /usr/include/pcl-1.7/pcl/visualization/point_cloud_handlers.h:41,
-                 from /usr/include/pcl-1.7/pcl/visualization/common/actor_map.h:40,
-                 from /usr/include/pcl-1.7/pcl/visualization/pcl_visualizer.h:47,
-                 from ../3D_Processing/PointCloud.h:18,
-                 from ../3D_Processing/DepthSensing.h:4,
-                 from ../RobotVision.h:15,
-                 from ../main.cpp:14:
-/usr/include/c++/4.8/backward/backward_warning.h:32:2: warning: #warning This file includes at least one deprecated or antiquated header which may be removed without further notice at a future date. Please use a non-deprecated interface with equivalent functionality instead. For a listing of replacement headers and interfaces, consult the file backward_warning.h. To disable this warning use -Wno-deprecated. [-Wcpp]
- #warning \
-  ^
-../main.cpp:22:0: warning: "SEND_SIGNALS" redefined [enabled by default]
- #define SEND_SIGNALS 1
- ^
-In file included from ../main.cpp:13:0:
-../RobotPlanning/RobotFSM.h:16:0: note: this is the location of the previous definition
- #define SEND_SIGNALS 0
- ^
-In file included from /usr/include/pcl-1.7/pcl/visualization/pcl_visualizer.h:52:0,
-                 from ../3D_Processing/PointCloud.h:18,
-                 from ../3D_Processing/DepthSensing.h:4,
-                 from ../RobotVision.h:15,
-                 from ../main.cpp:14:
-/usr/include/pcl-1.7/pcl/visualization/area_picking_event.h: In member function ‘bool pcl::visualization::AreaPickingEvent::getPointsIndices(std::vector<int>&) const’:
-/usr/include/pcl-1.7/pcl/visualization/area_picking_event.h:64:30: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-           if (nb_points_ == -1)
-                              ^
-Finished building: ../main.cpp
- 
-Building target: BeachCleanerProject
-Invoking: GCC C++ Linker
-g++ -L/usr/local/lib -L/usr/lib -o"BeachCleanerProject"  ./OpOthers.o ./RobotVision.o ./main.o  ./RobotPlanning/RobotFSM.o  ./DataTransfer/SerialDevice.o  ./Capture/DeviceCapture.o  ./3D_Processing/SACMethod/SAC_MethodXYZ.o  ./3D_Processing/DepthSensing.o ./3D_Processing/PointCloud.o ./3D_Processing/PointCloudGrayscale.o ./3D_Processing/PointCloudRGB.o  ./3D_Processing/CloudDownsampling/VoxelDownsampling.o  ./2D_Processing/CanRecognition.o ./2D_Processing/PreProcess.o ./2D_Processing/Retinex.o ./2D_Processing/WaterRecognition.o  ./.metadata/.plugins/org.eclipse.cdt.make.core/specs.o   -lopencv_core -lopencv_imgproc -lopencv_highgui -lopencv_ml -lopencv_video -lopencv_features2d -lopencv_calib3d -lopencv_objdetect -lopencv_contrib -lopencv_legacy -lopencv_flann -lpcl_apps -lpcl_common -lpcl_features -lpcl_filters -lpcl_io -lpcl_kdtree -lpcl_keypoints -lpcl_octree -lpcl_registration -lpcl_sample_consensus -lpcl_search -lpcl_segmentation -lpcl_surface -lpcl_tracking -lpcl_visualization -lflann -lvtkRendering -lvtkGraphics -lvtkIO -lvtkFiltering -lvtkCommon -lvtksys -lboost_thread -lboost_system -lboost_filesystem -lboost_graph_parallel -ldl -lpthread -lrt -lOpenNI -lserial
-Finished building target: BeachCleanerProject
- 
+make: No se hace nada para «all».

@@ -1,0 +1,17 @@
+/*
+ * Time.h
+ *
+ *  Created on: 23/05/2014
+ *      Author: rgap
+ */
+
+#ifndef TIME_H_
+#define TIME_H_
+
+class Time {
+public:
+	Time();
+	virtual ~Time();
+};
+
+#endif /* TIME_H_ */
