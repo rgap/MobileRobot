@@ -56,15 +56,16 @@ void action_retroceder(int miliseconds) {
 }
 
 void action_girarDer(int miliseconds) {
-    //retrocederEje1
-    digitalWrite(11, LOW);
-    digitalWrite(10, HIGH);
-    //retrocederEje2
-    digitalWrite(9, LOW);
-    digitalWrite(8, HIGH);
-  
-    Serial.println("girar der");
-    delay(miliseconds);
+  //retrocederEje1
+  digitalWrite(11, LOW);
+  digitalWrite(10, HIGH);
+  //retrocederEje2
+  digitalWrite(9, LOW);
+  digitalWrite(8, HIGH);
+
+  Serial.println("girar der");
+
+  delay(miliseconds);
 }
 
 void action_girarIzq(int miliseconds) {
@@ -124,7 +125,7 @@ void action_recogerLata(){
   action_parar();
 
   // MOVER PALA INFERIOR ABAJO
-  palaInf_moveToAngle(15);
+  palaInf_moveToAngle(0);
   palaSup_moveToAngle(0);
   setTime(timeAc, time, 500);
   delay(time);
@@ -135,7 +136,7 @@ void action_recogerLata(){
   notCompletedSup = notCompletedInf = 1;
   
   int posPalaSupIzq_, posPalaInfIzq_;
-  posPalaSupIzq_ = 90, posPalaInfIzq_ = 120; // ANGULOS FINALES
+  posPalaSupIzq_ = 108, posPalaInfIzq_ = 90; // ANGULOS FINALES
 
   while (notCompletedSup || notCompletedInf) {
     
@@ -152,7 +153,7 @@ void action_recogerLata(){
     } else {
       notCompletedSup = 0;
     }
-    setTime(timeAc, time, 15);
+    setTime(timeAc, time, 20);
     delay(time);
 
   }
@@ -249,13 +250,11 @@ void loop() {
       Serial.println("TEST");
       break;    
     case 'C':
-      //palaSup_moveToAngle(8);
-      palaInf_moveToAngle(0);
+      palaSup_moveToAngle(8);
       Serial.println("TEST");
       break;
     case 'D':
-      //palaSup_moveToAngle(95);
-      palaInf_moveToAngle(120);
+      palaSup_moveToAngle(95);
       Serial.println("TEST");
       break;
     case 'E':
